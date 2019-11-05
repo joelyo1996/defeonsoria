@@ -12,3 +12,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Timer_timeout():
+	get_tree().change_scene("res://menu.tscn")
+	pass # Replace with function body.
