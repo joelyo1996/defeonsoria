@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://menu2.gd" type="Script" id=1]
 [ext_resource path="res://Fuente/kenvector_future.ttf" type="DynamicFontData" id=2]
@@ -133,6 +133,25 @@ tracks/1/keys = {
 "values": [ Vector2( 987.155, 46.3209 ) ]
 }
 
+[sub_resource type="Animation" id=8]
+resource_name = "votomsigue"
+tracks/0/type = "value"
+tracks/0/path = NodePath("siguiemte ecema:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=9]
+size = 20
+font_data = ExtResource( 2 )
+
 [node name="ecena1" type="Node2D"]
 position = Vector2( -14.9641, 5.44148 )
 script = ExtResource( 1 )
@@ -251,8 +270,23 @@ margin_bottom = 448.0
 
 [node name="Animapem" type="AnimationPlayer" parent="."]
 anims/pem = SubResource( 7 )
+anims/votomsigue = SubResource( 8 )
+
+[node name="siguiemte ecema" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 784.046
+margin_top = 552.933
+margin_right = 1036.05
+margin_bottom = 581.933
+custom_fonts/font = SubResource( 9 )
+text = "Siguiente escena"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="area_entered" from="termo/Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="pressed" from="votomtermo" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="votomcuadero" to="." method="_on_votomcuadero_pressed"]
 [connection signal="pressed" from="votompem" to="." method="_on_votompem_pressed"]
+[connection signal="pressed" from="siguiemte ecema" to="." method="_on_siguiemte_ecema_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
