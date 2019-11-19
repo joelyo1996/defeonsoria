@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ecema2.gd" type="Script" id=1]
 [ext_resource path="res://Fuente/kenvector_future.ttf" type="DynamicFontData" id=2]
@@ -16,11 +16,27 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Button:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.0126847, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 2 )
 
 [node name="ecema2" type="Node2D"]
 script = ExtResource( 1 )
@@ -32,10 +48,19 @@ custom_fonts/font = SubResource( 1 )
 text = "Puerta"
 
 [node name="pj" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 502.622, 353.697 )
 texture = ExtResource( 3 )
 
 [node name="Animpj" type="AnimationPlayer" parent="."]
 anims/pj = SubResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.0294423 )
+margin_left = 749.0
+margin_top = 538.0
+margin_right = 1013.0
+margin_bottom = 602.0
+custom_fonts/font = SubResource( 3 )
+text = "Siguiente escena"
 [connection signal="pressed" from="puerta" to="." method="_on_puerta_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

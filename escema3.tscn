@@ -1,0 +1,226 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://escema3.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Fuente/kenvector_future.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "mico"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("mico:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.00842021, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 967.872, 558.886 ), Vector2( 832.212, 466.938 ), Vector2( 753.83, 406.645 ), Vector2( 657.36, 364.439 ), Vector2( 467.436, 368.961 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("termos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.0206487, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.478431, 0.0901961, 0.0901961, 0 ), Color( 0.478431, 0.0901961, 0.0901961, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite2:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.0206487, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0206487, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.145098, 0.505882, 0.133333, 0 ), Color( 0.145098, 0.505882, 0.133333, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "micro"
+tracks/0/type = "value"
+tracks/0/path = NodePath("microfomo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0154641, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 453.162, 157.152 ), Vector2( 541.559, 120.32 ), Vector2( 772.374, 39.2894 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "termo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("termo:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.00894114 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 772, 18 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("termos:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 803.411, 48.2348 ), Vector2( 725.03, 120.587 ), Vector2( 586.355, 162.793 ), Vector2( 464.26, 162.793 ), Vector2( 346.566, 150.515 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("microfomo:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.0154641, 0.0215565, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.113725, 0.545098, 0.14902, 0 ), Color( 0.113725, 0.545098, 0.14902, 0 ), Color( 0.113725, 0.545098, 0.14902, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("martillo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0154641, 0.0215565, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.490196, 0.0705882, 0.0705882, 0 ), Color( 0.490196, 0.0705882, 0.0705882, 0 ), Color( 0.490196, 0.0705882, 0.0705882, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("pimza:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.0154641, 0.0215565, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.490196, 0.0705882, 0.364706, 0 ), Color( 0.490196, 0.0705882, 0.364706, 0 ), Color( 0.490196, 0.0705882, 0.364706, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("tormillos:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.0154641, 0.0215565, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0392157, 0.0980392, 0.415686, 0 ), Color( 0.0392157, 0.0980392, 0.415686, 0 ), Color( 0.0392157, 0.0980392, 0.415686, 1 ) ]
+}
+
+[node name="escema3" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="mico" type="Sprite" parent="."]
+position = Vector2( 963.758, 556.098 )
+texture = ExtResource( 2 )
+
+[node name="mostrador" type="Button" parent="."]
+margin_left = 35.0
+margin_top = 194.0
+margin_right = 519.0
+margin_bottom = 325.0
+custom_fonts/font = SubResource( 1 )
+text = "Mostrador"
+
+[node name="Animatiomico" type="AnimationPlayer" parent="."]
+anims/mico = SubResource( 2 )
+anims/micro = SubResource( 4 )
+anims/termo = SubResource( 3 )
+
+[node name="termos" type="Sprite" parent="."]
+modulate = Color( 0.478431, 0.0901961, 0.0901961, 0.00273614 )
+position = Vector2( 803.411, 48.2348 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0.0470588, 0.101961, 0.176471, 1 )
+self_modulate = Color( 1, 1, 1, 0.00273614 )
+position = Vector2( 901.388, 46.7275 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.505882, 0.133333, 0.00273614 )
+position = Vector2( 990.321, 48.2348 )
+texture = ExtResource( 2 )
+
+[node name="termo" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 772.0
+margin_top = 18.0
+margin_right = 835.0
+margin_bottom = 79.0
+
+[node name="tormillos" type="Sprite" parent="."]
+modulate = Color( 0.0392157, 0.0980392, 0.415686, 0 )
+position = Vector2( 60.2935, 149.226 )
+texture = ExtResource( 2 )
+
+[node name="pimza" type="Sprite" parent="."]
+modulate = Color( 0.490196, 0.0705882, 0.364706, 0 )
+position = Vector2( 158.271, 150.734 )
+texture = ExtResource( 2 )
+
+[node name="martillo" type="Sprite" parent="."]
+modulate = Color( 0.490196, 0.0705882, 0.0705882, 0 )
+position = Vector2( 260.77, 149.226 )
+texture = ExtResource( 2 )
+
+[node name="microfomo" type="Sprite" parent="."]
+modulate = Color( 0.113725, 0.545098, 0.14902, 0 )
+position = Vector2( 447.957, 152.824 )
+scale = Vector2( 0.980816, 1 )
+texture = ExtResource( 2 )
+
+[node name="micro" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 412.485
+margin_top = 118.861
+margin_right = 477.485
+margin_bottom = 176.861
+[connection signal="pressed" from="mostrador" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="termo" to="." method="_on_termo_pressed"]
+[connection signal="pressed" from="micro" to="." method="_on_micro_pressed"]

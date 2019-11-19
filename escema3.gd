@@ -13,11 +13,16 @@ func _ready():
 #	pass
 
 
-func _on_puerta_pressed():
-	$Animpj.play("pj")
+func _on_Button_pressed():
+	$Animatiomico.play("mico")
 	pass # Replace with function body.
 
 
-func _on_Button_pressed():
-	get_tree().change_scene("res://escema3.tscn")
+func _on_termo_pressed():
+	$Animatiomico.play("termo")
+	pass # Replace with function body.
+
+
+func _on_micro_pressed():
+	$Animatiomico.play("micro")
 	pass # Replace with function body.
