@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://escenas/menu.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+
+[node name="menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="play" type="Button" parent="."]
+margin_left = 512.378
+margin_top = 462.241
+margin_right = 586.378
+margin_bottom = 520.241
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 550.503, 494.434 )
+texture = ExtResource( 2 )
+
+[node name="creditos" type="Button" parent="."]
+margin_left = 329.41
+margin_top = 458.953
+margin_right = 409.41
+margin_bottom = 515.953
+
+[node name="Label" type="Label" parent="."]
+margin_left = 183.522
+margin_top = 12.656
+margin_right = 828.522
+margin_bottom = 432.656
+custom_fonts/font = SubResource( 1 )
+text = "creditos"
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]

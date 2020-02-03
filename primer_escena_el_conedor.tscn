@@ -1,0 +1,637 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://primer_escena_el_conedor.gd" type="Script" id=1]
+[ext_resource path="res://asset/fondo4.jpg" type="Texture" id=2]
+[ext_resource path="res://asset/busto_nico.png" type="Texture" id=3]
+[ext_resource path="res://asset/vale.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://asset/nene.png" type="Texture" id=6]
+[ext_resource path="res://asset/triagulo.png" type="Texture" id=7]
+[ext_resource path="res://sorbete1.gd" type="Script" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "amin3"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadropersonaje/Area2D/vale:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.00378251 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadrotexto/texto2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.0627451, 0.0588235, 0.0588235, 0 ), Color( 0.0627451, 0.0588235, 0.0588235, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "amin4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadropersonaje/Area2D/vale:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadrotexto/texto2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadropersonaje/Area2D/nene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.00746316, 0.980739, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadrotexto/texto1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0.054902, 0.0509804, 0.0509804, 0 ), Color( 0.054902, 0.0509804, 0.0509804, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadrotexto/texto1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0155875, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.054902, 0.0509804, 0.0509804, 1 ), Color( 0.054902, 0.0509804, 0.0509804, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadropersonaje/Area2D/nene:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.0222074, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "anim5"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadropersonaje/Area2D/nene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0246894, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadrotexto/texto3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 0 ), Color( 0.00784314, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "anim6"
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadropersonaje/Area2D/nene:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadrotexto/texto3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "anim7"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadropersonaje/Area2D/vale:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadrotexto/texto4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "anim8"
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadrotexto/texto4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0209311, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadropersonaje/Area2D/vale:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.0209311, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "anim9"
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadrotexto/texto5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "bebe"
+tracks/0/type = "value"
+tracks/0/path = NodePath("sorbete8:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sorbete7:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sorbete6:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sorbete5:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("sorbete4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("sorbete3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("sorbete1:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("sorbete2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("nene:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 33.216, 30.7668 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 35.3979, 44.5809 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 32.0842, 39.2758 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -1.29236, -2.58471 )
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 511.538, 301.43 )
+scale = Vector2( 3.69732, 3.26142 )
+texture = ExtResource( 2 )
+
+[node name="cuadrotexto" type="ColorRect" parent="."]
+margin_left = 134.0
+margin_top = 6.0
+margin_right = 1019.0
+margin_bottom = 106.0
+
+[node name="texto1" type="Label" parent="cuadrotexto"]
+modulate = Color( 0.054902, 0.0509804, 0.0509804, 0 )
+margin_left = -1.58667
+margin_right = 771.413
+margin_bottom = 106.0
+rect_scale = Vector2( 2, 2 )
+text = "Mamá, hoy en la escuela estuvimos hablando del “Derecho a la
+ comunicación” y traje tarea para hacer con vos y el abuelo.”"
+
+[node name="texto2" type="Label" parent="cuadrotexto"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "¿Qué clase de tarea?"
+
+[node name="texto3" type="Label" parent="cuadrotexto"]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "Necesito preguntarles ¿qué creen que es el Derecho a la
+ comunicación?"
+
+[node name="texto4" type="Label" parent="cuadrotexto"]
+modulate = Color( 0, 0, 0, 0 )
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "Ok, pero antes ayudame a darle la merienda a tu hermano. 
+A Bruno le gusta la chocolatada y le gusta tomarla con su sorbetes.
+Resuelve el puzle del sorbete para que bruno pueda merendar."
+
+[node name="texto5" type="Label" parent="cuadrotexto"]
+modulate = Color( 0, 0, 0, 0 )
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 2, 2 )
+text = "has clik en el sorbete "
+
+[node name="cuadropersonaje" type="ColorRect" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 133.0
+margin_bottom = 141.0
+
+[node name="Area2D" type="Area2D" parent="cuadropersonaje"]
+position = Vector2( -1.29236, -2.58471 )
+
+[node name="nene" type="Sprite" parent="cuadropersonaje/Area2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 61.7755, 71.0952 )
+scale = Vector2( 0.413603, 0.31869 )
+texture = ExtResource( 3 )
+
+[node name="vale" type="Sprite" parent="cuadropersonaje/Area2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 65.7422, 73.4753 )
+scale = Vector2( 0.338236, 0.35439 )
+texture = ExtResource( 4 )
+
+[node name="sorbete" type="Sprite" parent="."]
+position = Vector2( 402.602, 332.278 )
+texture = ExtResource( 5 )
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 378.0
+margin_top = 302.0
+margin_right = 430.0
+margin_bottom = 368.0
+disabled = true
+
+[node name="nene" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 549.755, 361.267 )
+scale = Vector2( 2.0479, 2.27606 )
+texture = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/amin3 = SubResource( 1 )
+anims/amin4 = SubResource( 2 )
+anims/anim1 = SubResource( 3 )
+anims/anim2 = SubResource( 4 )
+anims/anim5 = SubResource( 5 )
+anims/anim6 = SubResource( 6 )
+anims/anim7 = SubResource( 7 )
+anims/anim8 = SubResource( 8 )
+anims/anim9 = SubResource( 9 )
+anims/bebe = SubResource( 10 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 1014.94
+margin_top = 75.5847
+margin_right = 1617.94
+margin_bottom = 564.585
+rect_rotation = 90.0
+rect_scale = Vector2( 0.05, 0.1 )
+texture_normal = ExtResource( 7 )
+
+[node name="sorbete1" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 557.387, 519.539 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete1/Area2D"]
+shape = SubResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="sorbete1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete1/StaticBody2D"]
+shape = SubResource( 12 )
+
+[node name="sorbete2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 719.273, 517.38 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete2/Area2D"]
+shape = SubResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="sorbete2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete2/StaticBody2D"]
+shape = SubResource( 13 )
+
+[node name="sorbete3" type="Sprite" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 391.185, 361.97 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete3/Area2D"]
+shape = SubResource( 11 )
+
+[node name="sorbete4" type="Sprite" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 389.026, 204.402 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete4/Area2D"]
+shape = SubResource( 11 )
+
+[node name="sorbete5" type="Sprite" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 555.229, 361.97 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete5/Area2D"]
+shape = SubResource( 11 )
+
+[node name="sorbete6" type="Sprite" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 714.956, 361.97 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete6/Area2D"]
+shape = SubResource( 11 )
+
+[node name="sorbete7" type="Sprite" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 553.07, 204.402 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete7/Area2D"]
+shape = SubResource( 11 )
+
+[node name="sorbete8" type="Sprite" parent="."]
+editor/display_folded = true
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 712.797, 202.243 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 5 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete8/Area2D"]
+shape = SubResource( 11 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="mouse_entered" from="sorbete1/Area2D" to="sorbete1" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete1/Area2D" to="sorbete1" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="sorbete2/Area2D" to="sorbete2" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete2/Area2D" to="sorbete2" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="sorbete3/Area2D" to="sorbete3" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete3/Area2D" to="sorbete3" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="sorbete4/Area2D" to="sorbete4" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete4/Area2D" to="sorbete4" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="sorbete5/Area2D" to="sorbete5" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete5/Area2D" to="sorbete5" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="sorbete6/Area2D" to="sorbete6" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete6/Area2D" to="sorbete6" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="sorbete7/Area2D" to="sorbete7" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete7/Area2D" to="sorbete7" method="_on_Area2D_mouse_exited"]
+[connection signal="mouse_entered" from="sorbete8/Area2D" to="sorbete8" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="sorbete8/Area2D" to="sorbete8" method="_on_Area2D_mouse_exited"]
