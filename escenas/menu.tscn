@@ -1,24 +1,25 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://escenas/menu.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://asset/logodefensoria.png" type="Texture" id=3]
-[ext_resource path="res://asset/unpaz_0.png" type="Texture" id=4]
-[ext_resource path="res://asset/fondosc.png" type="Texture" id=5]
-[ext_resource path="res://asset/sol.png" type="Texture" id=6]
-[ext_resource path="res://asset/logojuego.png" type="Texture" id=7]
-[ext_resource path="res://asset/BotonPlaynormal.png" type="Texture" id=8]
-[ext_resource path="res://asset/BotonPlayprecionado.png" type="Texture" id=9]
-[ext_resource path="res://asset/botonSonidoactivo.png" type="Texture" id=10]
-[ext_resource path="res://asset/botonSonidodesactivado.png" type="Texture" id=11]
-[ext_resource path="res://asset/botoninfonormal.png" type="Texture" id=12]
-[ext_resource path="res://asset/botoninfoprecionado.png" type="Texture" id=13]
-[ext_resource path="res://asset/Botonsalirnormal.png" type="Texture" id=14]
-[ext_resource path="res://asset/Botonsalirprecionado.png" type="Texture" id=15]
+[ext_resource path="res://asset/fondosc.png" type="Texture" id=3]
+[ext_resource path="res://asset/sol.png" type="Texture" id=4]
+[ext_resource path="res://asset/logojuego.png" type="Texture" id=5]
+[ext_resource path="res://asset/BotonPlaynormal.png" type="Texture" id=6]
+[ext_resource path="res://asset/BotonPlayprecionado.png" type="Texture" id=7]
+[ext_resource path="res://asset/botonSonidoactivo.png" type="Texture" id=8]
+[ext_resource path="res://asset/botonSonidodesactivado.png" type="Texture" id=9]
+[ext_resource path="res://asset/botoninfonormal.png" type="Texture" id=10]
+[ext_resource path="res://asset/botoninfoprecionado.png" type="Texture" id=11]
+[ext_resource path="res://asset/Botonsalirnormal.png" type="Texture" id=12]
+[ext_resource path="res://asset/Botonsalirprecionado.png" type="Texture" id=13]
+[ext_resource path="res://asset/02.png" type="Texture" id=14]
+[ext_resource path="res://asset/Splash Screen Defensoria.png" type="Texture" id=15]
+[ext_resource path="res://asset/01.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "animacion_sc"
 length = 2.0
 tracks/0/type = "value"
@@ -28,13 +29,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.0178089, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.0178089, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "credito"
 length = 2.0
 tracks/0/type = "value"
@@ -62,8 +63,7 @@ tracks/1/keys = {
 "values": [ Vector2( 57.6519, 605.481 ), Vector2( 52.5043, 47.5824 ), Vector2( 52.5043, 47.5824 ) ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "precentacion"
+[sub_resource type="Animation" id=4]
 length = 3.0
 step = 1.0
 tracks/0/type = "value"
@@ -76,7 +76,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1208.73, 359.627 ), Vector2( 802.766, 360 ), Vector2( 802.766, 360 ), Vector2( 860.873, 50 ) ]
+"values": [ Vector2( 1208.73, 359.627 ), Vector2( 892.892, 360 ), Vector2( 892.892, 360 ), Vector2( 889.287, 75.202 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("unpaz:position")
@@ -88,11 +88,22 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -191.517, 360 ), Vector2( 289.543, 360 ), Vector2( 289.543, 360 ), Vector2( 149.39, 50 ) ]
+"values": [ Vector2( -191.517, 360 ), Vector2( 130.921, 360 ), Vector2( 130.921, 360 ), Vector2( 138.131, 75.202 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("departamento:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.0132826, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 533.546, 746.243 ), Vector2( 529.941, 360 ), Vector2( 529.941, 360 ), Vector2( 529.941, 75.202 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "salir"
+[sub_resource type="Animation" id=5]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("fondo:modulate")
@@ -168,66 +179,55 @@ custom_fonts/font = SubResource( 1 )
 text = "creditos"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/animacion_sc = SubResource( 3 )
-anims/credito = SubResource( 5 )
-anims/precentacion = SubResource( 2 )
-anims/salir = SubResource( 4 )
-
-[node name="defensoria" type="Sprite" parent="."]
-position = Vector2( 1208.73, 359.627 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 3 )
-
-[node name="unpaz" type="Sprite" parent="."]
-position = Vector2( -191.517, 360 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+anims/animacion_sc = SubResource( 2 )
+anims/credito = SubResource( 3 )
+anims/precentacion = SubResource( 4 )
+anims/salir = SubResource( 5 )
 
 [node name="fondo" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.0414648 )
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 512.189, 306.075 )
 scale = Vector2( 0.339525, 0.319631 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="sol" type="Sprite" parent="fondo"]
 position = Vector2( -467.136, -559.222 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 6 )
+texture = ExtResource( 4 )
 
 [node name="logo" type="Sprite" parent="fondo"]
-texture = ExtResource( 7 )
+texture = ExtResource( 5 )
 
 [node name="play" type="TextureButton" parent="fondo"]
 margin_left = -636.002
 margin_top = 407.631
 margin_right = -160.002
 margin_bottom = 821.631
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 
 [node name="sonido" type="TextureButton" parent="fondo"]
 margin_left = -1540.92
 margin_top = 521.368
 margin_right = -1064.92
 margin_bottom = 934.368
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
 
 [node name="info" type="TextureButton" parent="fondo"]
 margin_left = 6.47681
 margin_top = 453.0
 margin_right = 310.477
 margin_bottom = 790.0
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
 
 [node name="salir" type="TextureButton" parent="fondo"]
 margin_left = 1113.99
 margin_top = 599.354
 margin_right = 1417.99
 margin_bottom = 936.354
-texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 15 )
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 13 )
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -239,6 +239,21 @@ margin_bottom = 1118.48
 [node name="Sprite" type="Sprite" parent="PanelContainer"]
 position = Vector2( 449.87, 249.928 )
 texture = ExtResource( 2 )
+
+[node name="departamento" type="Sprite" parent="."]
+position = Vector2( 533.521, 743.577 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 14 )
+
+[node name="defensoria" type="Sprite" parent="."]
+position = Vector2( 1208.73, 359.627 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 15 )
+
+[node name="unpaz" type="Sprite" parent="."]
+position = Vector2( -191.517, 360 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 16 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 505.298
