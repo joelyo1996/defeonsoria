@@ -39,3 +39,8 @@ func _on_info_pressed():
 	yield(get_tree().create_timer(1),"timeout")
 	$AnimationPlayer.play("credito")
 	pass # Replace with function body.
+
+
+func _on_Button_pressed():
+	$AnimationPlayer.play("salir_creditos")
+	pass # Replace with function body.
