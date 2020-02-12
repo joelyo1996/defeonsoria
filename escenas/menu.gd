@@ -23,7 +23,8 @@ func _process(delta):
 
 
 func _on_play_pressed():
-	get_tree().change_scene("res://primer_escena_el_conedor.tscn")
+	yield(get_tree().create_timer(3),"timeout")
+	get_tree().change_scene("res://escenas/mapa.tscn")
 	
 
 
