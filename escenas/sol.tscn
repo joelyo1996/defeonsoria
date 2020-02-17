@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://asset/sol.png" type="Texture" id=1]
+[ext_resource path="res://escenas/sol.gd" type="Script" id=2]
+
+[node name="sol" type="Sprite"]
+position = Vector2( -467.136, -559.222 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )

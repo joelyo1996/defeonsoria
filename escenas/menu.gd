@@ -1,8 +1,8 @@
 extends Node2D
 
 # Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
+var s
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +13,7 @@ func _ready():
 	$AnimationPlayer.play("animacion_sc")
 	yield(get_tree().create_timer(3),"timeout")
 	$ColorRect.queue_free()
-
+	
 	pass 
 
 
@@ -39,6 +39,8 @@ func _on_salir_pressed():
 func _on_info_pressed():
 	yield(get_tree().create_timer(1),"timeout")
 	$AnimationPlayer.play("credito")
+	
+	
 	pass # Replace with function body.
 
 

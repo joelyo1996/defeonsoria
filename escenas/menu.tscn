@@ -1,25 +1,26 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://escenas/menu.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://asset/fondosc.png" type="Texture" id=3]
 [ext_resource path="res://escenas/fondo.gd" type="Script" id=4]
-[ext_resource path="res://asset/sol.png" type="Texture" id=5]
-[ext_resource path="res://escenas/sol.gd" type="Script" id=6]
-[ext_resource path="res://asset/logojuego.png" type="Texture" id=7]
-[ext_resource path="res://asset/BotonPlaynormal.png" type="Texture" id=8]
-[ext_resource path="res://asset/BotonPlayprecionado.png" type="Texture" id=9]
-[ext_resource path="res://asset/botonSonidoactivo.png" type="Texture" id=10]
-[ext_resource path="res://asset/botonSonidodesactivado.png" type="Texture" id=11]
-[ext_resource path="res://asset/botoninfonormal.png" type="Texture" id=12]
-[ext_resource path="res://asset/botoninfoprecionado.png" type="Texture" id=13]
-[ext_resource path="res://asset/Botonsalirnormal.png" type="Texture" id=14]
-[ext_resource path="res://asset/Botonsalirprecionado.png" type="Texture" id=15]
+[ext_resource path="res://escenas/sol.tscn" type="PackedScene" id=5]
+[ext_resource path="res://asset/logojuego.png" type="Texture" id=6]
+[ext_resource path="res://asset/BotonPlaynormal.png" type="Texture" id=7]
+[ext_resource path="res://asset/BotonPlayprecionado.png" type="Texture" id=8]
+[ext_resource path="res://asset/botonSonidoactivo.png" type="Texture" id=9]
+[ext_resource path="res://asset/botonSonidodesactivado.png" type="Texture" id=10]
+[ext_resource path="res://asset/botoninfonormal.png" type="Texture" id=11]
+[ext_resource path="res://asset/botoninfoprecionado.png" type="Texture" id=12]
+[ext_resource path="res://asset/Botonsalirnormal.png" type="Texture" id=13]
+[ext_resource path="res://asset/Botonsalirprecionado.png" type="Texture" id=14]
+[ext_resource path="res://asset/creditos.png" type="Texture" id=15]
 [ext_resource path="res://asset/02.png" type="Texture" id=16]
 [ext_resource path="res://asset/Splash Screen Defensoria.png" type="Texture" id=17]
 [ext_resource path="res://asset/01.png" type="Texture" id=18]
-
-[sub_resource type="DynamicFont" id=1]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=19]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=20]
+[ext_resource path="res://asset/Colored Crayons.ttf" type="DynamicFontData" id=21]
 
 [sub_resource type="Animation" id=2]
 resource_name = "animacion_sc"
@@ -76,8 +77,32 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tex_creditos:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=4]
 resource_name = "play"
 length = 2.0
 tracks/0/type = "value"
@@ -93,7 +118,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 3.0
 step = 1.0
 tracks/0/type = "value"
@@ -133,7 +158,7 @@ tracks/2/keys = {
 "values": [ Vector2( 533.546, 746.243 ), Vector2( 529.941, 360 ), Vector2( 529.941, 360 ), Vector2( 529.941, 75.202 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("fondo:modulate")
@@ -184,8 +209,7 @@ tracks/3/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "salir_creditos"
+[sub_resource type="Animation" id=7]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("PanelContainer:rect_position")
@@ -223,6 +247,35 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("Label:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("tex_creditos:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_color = Color( 1, 1, 1, 0 )
+font_data = ExtResource( 21 )
 
 [node name="menu" type="Node2D"]
 script = ExtResource( 1 )
@@ -252,21 +305,13 @@ margin_top = 458.953
 margin_right = 409.41
 margin_bottom = 515.953
 
-[node name="Label" type="Label" parent="."]
-margin_left = 194.906
-margin_top = 16.4508
-margin_right = 839.906
-margin_bottom = 436.451
-custom_fonts/font = SubResource( 1 )
-text = "creditos"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/animacion_sc = SubResource( 2 )
 anims/credito = SubResource( 3 )
-anims/play = SubResource( 7 )
-anims/precentacion = SubResource( 4 )
-anims/salir = SubResource( 5 )
-anims/salir_creditos = SubResource( 6 )
+anims/play = SubResource( 4 )
+anims/precentacion = SubResource( 5 )
+anims/salir = SubResource( 6 )
+anims/salir_creditos = SubResource( 7 )
 
 [node name="fondo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -275,45 +320,42 @@ scale = Vector2( 0.340881, 0.319631 )
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="sol" type="Sprite" parent="fondo"]
-position = Vector2( -467.136, -559.222 )
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+[node name="sol" parent="fondo" instance=ExtResource( 5 )]
 
 [node name="logo" type="Sprite" parent="fondo"]
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="play" type="TextureButton" parent="fondo"]
 margin_left = -636.002
 margin_top = 407.631
 margin_right = -160.002
 margin_bottom = 821.631
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 
 [node name="sonido" type="TextureButton" parent="fondo"]
 margin_left = -1540.92
 margin_top = 521.368
 margin_right = -1064.92
 margin_bottom = 934.368
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
 
 [node name="info" type="TextureButton" parent="fondo"]
 margin_left = 6.47681
 margin_top = 453.0
 margin_right = 310.477
 margin_bottom = 790.0
-texture_normal = ExtResource( 12 )
-texture_pressed = ExtResource( 13 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 12 )
 
 [node name="salir" type="TextureButton" parent="fondo"]
 margin_left = 1113.99
 margin_top = 599.354
 margin_right = 1417.99
 margin_bottom = 936.354
-texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 15 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -324,7 +366,8 @@ margin_bottom = 1223.91
 
 [node name="Sprite" type="Sprite" parent="PanelContainer"]
 position = Vector2( 449.87, 249.928 )
-texture = ExtResource( 2 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 15 )
 
 [node name="departamento" type="Sprite" parent="."]
 position = Vector2( 533.14, 702.735 )
@@ -343,18 +386,45 @@ position = Vector2( -191.517, 360 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 18 )
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 505.298
-margin_top = 514.255
-margin_right = 517.298
-margin_bottom = 534.255
-__meta__ = {
-"_edit_group_": true
-}
+margin_left = 598.447
+margin_top = 398.449
+margin_right = 1074.45
+margin_bottom = 812.449
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 20 )
 
-[node name="Sprite" type="Sprite" parent="Button"]
-texture = ExtResource( 2 )
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 277.984
+margin_top = 215.336
+margin_right = 922.984
+margin_bottom = 635.336
+custom_fonts/font = SubResource( 1 )
+text = "Game Design												                            
+Nestor Arriola														                    
+																			                    
+
+
+Programador
+Joel Bello
+
+"
+
+[node name="tex_creditos" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 539.807
+margin_top = 202.748
+margin_right = 1184.81
+margin_bottom = 622.748
+custom_fonts/font = SubResource( 1 )
+text = "Artistas
+Prisila Scavino
+Enzo
+
+"
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="fondo/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="fondo/info" to="." method="_on_info_pressed"]
