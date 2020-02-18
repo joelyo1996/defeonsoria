@@ -47,3 +47,14 @@ func _on_info_pressed():
 func _on_Button_pressed():
 	$AnimationPlayer.play("salir_creditos")
 	pass # Replace with function body.
+
+
+func _on_sonido_pressed():
+	var a= false
+	if (a == true):
+		$fondo/sonido.texture_normal
+		a == false
+	if (a == false):
+		$fondo/sonido.texture_focused
+		a == true
+	pass # Replace with function body.
