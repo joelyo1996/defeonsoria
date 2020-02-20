@@ -23,6 +23,7 @@ func _process(delta):
 
 
 func _on_play_pressed():
+	$AnimationPlayer.play("play")
 	yield(get_tree().create_timer(3),"timeout")
 	get_tree().change_scene("res://escenas/mapa.tscn")
 	
