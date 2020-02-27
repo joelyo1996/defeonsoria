@@ -22,7 +22,7 @@ func _physics_process(delta):
 		move.x = -spee
 		$AnimationPlayer.play("move_x")
 		$Sprite.flip_h= true
-		$Sprite.flip_h= false
+		$Sprite.flip_v= false
 	if Input.is_action_just_released("abajo") or Input.is_action_just_released("arriba") or Input.is_action_just_released("abajo") or Input.is_action_just_released("derecha") or Input.is_action_just_released("izqui"):
 		$AnimationPlayer.stop()
 		move.x = 0

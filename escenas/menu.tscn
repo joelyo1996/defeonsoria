@@ -5,7 +5,7 @@
 [ext_resource path="res://asset/fondosc.png" type="Texture" id=3]
 [ext_resource path="res://escenas/fondo.gd" type="Script" id=4]
 [ext_resource path="res://escenas/sol.tscn" type="PackedScene" id=5]
-[ext_resource path="res://asset/logojuego.png" type="Texture" id=6]
+[ext_resource path="res://asset/LogoJuego.png" type="Texture" id=6]
 [ext_resource path="res://asset/BotonPlaynormal.png" type="Texture" id=7]
 [ext_resource path="res://asset/BotonPlayprecionado.png" type="Texture" id=8]
 [ext_resource path="res://asset/botonSonidoactivo.png" type="Texture" id=9]
@@ -425,6 +425,9 @@ Prisila Scavino
 Enzo
 
 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="fondo/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="fondo/sonido" to="." method="_on_sonido_pressed"]

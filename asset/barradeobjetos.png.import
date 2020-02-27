@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LogoJuego.png-fa335824df6a4ae247642b2e46355bcd.stex"
+path="res://.import/barradeobjetos.png-9cc5c66748f6511055479e26e0cbfb36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/LogoJuego.png"
-dest_files=[ "res://.import/LogoJuego.png-fa335824df6a4ae247642b2e46355bcd.stex" ]
+source_file="res://asset/barradeobjetos.png"
+dest_files=[ "res://.import/barradeobjetos.png-9cc5c66748f6511055479e26e0cbfb36.stex" ]
 
 [params]
 

@@ -7,23 +7,24 @@ func _ready():
 	$AnimationPlayer.play("anim1")
 	pass
 	
-func _process(delta):	
+func dialogo():
 	if contadordialogo == 1:
 		$AnimationPlayer.play("anim2")
-		contadordialogo = 2
+		
+		pass
+		
+	if contadordialogo == 2:
+		$AnimationPlayer.play("amin4")
+		
+		
 		pass
 		
 	if contadordialogo == 3:
-		contadordialogo = 4
-		$AnimationPlayer.play("amin4")
-		pass
 		
-	if contadordialogo == 5:
-		contadordialogo = 6
 		$AnimationPlayer.play("anim6")
 		pass
-	if contadordialogo == 7:
-		contadordialogo = 8
+	if contadordialogo == 4:
+		
 		$AnimationPlayer.play("anim8")
 		pass
 func _on_Button_pressed():
@@ -32,6 +33,7 @@ func _on_Button_pressed():
 	
 func _on_TextureButton_pressed():
 	contadordialogo = contadordialogo + 1
+	dialogo()
 	pass
 
 func _on_AnimationPlayer_animation_finished(anim_name):
@@ -40,7 +42,9 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		pass
 		
 	if anim_name == "amin4":
-		$AnimationPlayer.play("anim5")
+		$AnimationPlayer.play("bebe")
+		$Button.disabled = false
+		pass
 		pass
 		
 	if anim_name == "anim6":
