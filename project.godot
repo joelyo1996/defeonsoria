@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 [autoload]
 
 sorvete1="*res://sorvete1.gd"
+global="*res://global.gd"
 
 [display]
 

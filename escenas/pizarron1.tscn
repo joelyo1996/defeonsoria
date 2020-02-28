@@ -1,18 +1,33 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=2]
-[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=3]
-[ext_resource path="res://escenas/pizarron1.gd" type="Script" id=4]
-[ext_resource path="res://asset/Valeria.png" type="Texture" id=5]
-[ext_resource path="res://asset/pizarron.jpg" type="Texture" id=6]
+[ext_resource path="res://escenas/pizarron1.gd" type="Script" id=1]
+[ext_resource path="res://asset/pizarron.jpg" type="Texture" id=2]
+[ext_resource path="res://asset/Valeria.png" type="Texture" id=3]
+[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=5]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
-font_data = ExtResource( 1 )
+font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=2]
-resource_name = "opcion1"
+resource_name = "boton_salir"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("boton:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("titulo:modulate")
@@ -75,8 +90,7 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "opcion1_salir"
+[sub_resource type="Animation" id=4]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("opcion1:rect_position")
@@ -431,22 +445,22 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=9]
 size = 20
-font_data = ExtResource( 1 )
+font_data = ExtResource( 4 )
 
 [node name="pizarron1" type="Node2D"]
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 
 [node name="fondo" type="Sprite" parent="."]
 position = Vector2( 509.95, 302.844 )
 scale = Vector2( 0.795995, 0.833345 )
-texture = ExtResource( 6 )
+texture = ExtResource( 2 )
 
 [node name="valeria" type="Sprite" parent="."]
 position = Vector2( 131.119, 354.74 )
 scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="titulo" type="Label" parent="."]
 margin_left = 288.854
@@ -523,8 +537,9 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/opcion1 = SubResource( 2 )
-anims/opcion1_salir = SubResource( 3 )
+anims/boton_salir = SubResource( 2 )
+anims/opcion1 = SubResource( 3 )
+anims/opcion1_salir = SubResource( 4 )
 anims/opcion2 = SubResource( 5 )
 anims/opcion2_salir = SubResource( 6 )
 anims/opcion3 = SubResource( 7 )
@@ -536,7 +551,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 9 )
 text = "Al intercambiar ideas con otras personas,
  formamos lazos con ellas. Podemos discutir y encontrar la forma de
  mejorar nuestro entorno."
@@ -550,7 +565,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 9 )
 text = "Todos y todas tenemos derecho a hacer preguntas. 
 Al encontrar las respuestas nos hacemos más sabios."
 __meta__ = {
@@ -563,7 +578,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 9 )
 text = "Todos y todas tenemos derecho a opinar, 
 aún más cuando es sobre un tema que nos afecta"
 __meta__ = {
@@ -576,8 +591,8 @@ margin_top = 404.973
 margin_right = 966.375
 margin_bottom = 818.973
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 2 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

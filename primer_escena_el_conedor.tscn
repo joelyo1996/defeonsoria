@@ -1,22 +1,25 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://primer_escena_el_conedor.gd" type="Script" id=1]
 [ext_resource path="res://asset/18 El comedor.png" type="Texture" id=2]
 [ext_resource path="res://asset/dialogo2.png" type="Texture" id=3]
-[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=4]
-[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=5]
-[ext_resource path="res://asset/barradeobjetos.png" type="Texture" id=8]
-[ext_resource path="res://asset/1.png" type="Texture" id=9]
-[ext_resource path="res://sorbete1.gd" type="Script" id=10]
-[ext_resource path="res://asset/2.png" type="Texture" id=11]
-[ext_resource path="res://asset/3.png" type="Texture" id=12]
-[ext_resource path="res://asset/4.png" type="Texture" id=13]
-[ext_resource path="res://asset/5.png" type="Texture" id=14]
-[ext_resource path="res://asset/6.png" type="Texture" id=15]
-[ext_resource path="res://asset/7.png" type="Texture" id=16]
-[ext_resource path="res://asset/8.png" type="Texture" id=17]
-[ext_resource path="res://asset/9.png" type="Texture" id=18]
-[ext_resource path="res://asset/imagencompleta.png" type="Texture" id=19]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=4]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=5]
+[ext_resource path="res://asset/1.png" type="Texture" id=6]
+[ext_resource path="res://sorbete1.gd" type="Script" id=7]
+[ext_resource path="res://asset/2.png" type="Texture" id=8]
+[ext_resource path="res://asset/3.png" type="Texture" id=9]
+[ext_resource path="res://asset/4.png" type="Texture" id=10]
+[ext_resource path="res://asset/5.png" type="Texture" id=11]
+[ext_resource path="res://asset/6.png" type="Texture" id=12]
+[ext_resource path="res://asset/7.png" type="Texture" id=13]
+[ext_resource path="res://asset/8.png" type="Texture" id=14]
+[ext_resource path="res://asset/9.png" type="Texture" id=15]
+[ext_resource path="res://asset/imagencompleta.png" type="Texture" id=16]
+[ext_resource path="res://asset/barradeobjetos.png" type="Texture" id=17]
+[ext_resource path="res://asset/Valeria.png" type="Texture" id=18]
+[ext_resource path="res://asset/libro2.png" type="Texture" id=19]
+[ext_resource path="res://asset/libro.png" type="Texture" id=20]
 
 [sub_resource type="Animation" id=1]
 resource_name = "amin3"
@@ -93,17 +96,163 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=5]
 resource_name = "anim5"
-length = 2.5
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadrotexto/texto5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("libro:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "anim6"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("libro:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("libro2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("cuadrotexto/texto6:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("cuadrotexto/texto7:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("cuadrotexto/texto5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=7]
 resource_name = "anim7"
-length = 2.5
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadrotexto/texto6:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("cuadrotexto/texto7:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [sub_resource type="Animation" id=8]
 resource_name = "anim8"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadrotexto/texto7:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.9, 2.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ParallaxBackground/Sprite:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.9, 2.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="Animation" id=9]
 resource_name = "anim9"
@@ -225,7 +374,19 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0.00667559, 1 ),
+"times": PoolRealArray( 0, 0.00667559, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Button:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
@@ -303,13 +464,65 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="texto4" type="Label" parent="cuadrotexto"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = -119.583
+margin_top = 40.6582
+margin_right = 685.417
+margin_bottom = 71.6582
+rect_scale = Vector2( 2, 2 )
+text = "¡Muy bien, lo haz resuelto en xx segundos!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto5" type="Label" parent="cuadrotexto"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = -119.583
+margin_top = 40.6582
+margin_right = 685.417
+margin_bottom = 71.6582
+rect_scale = Vector2( 2, 2 )
+text = "Haz click en el cuaderno que está en la mesa para llevarte las anotaciones."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto6" type="Label" parent="cuadrotexto"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = -119.583
+margin_top = 40.6582
+margin_right = 685.417
+margin_bottom = 71.6582
+rect_scale = Vector2( 2, 2 )
+text = "Ahora te aconsejo que vayas a hablar con Adolfo. En su juventud trabajó como
+ camarógrafo en la estación de TV. Seguro que él podrá ayudarte también."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="texto7" type="Label" parent="cuadrotexto"]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = -119.583
+margin_top = 40.6582
+margin_right = 685.417
+margin_bottom = 71.6582
+rect_scale = Vector2( 2, 2 )
+text = "Adolfo tiene una ferretería en la esquina."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 691.546
-margin_top = 333.809
-margin_right = 743.546
-margin_bottom = 399.809
+margin_left = 584.349
+margin_top = 408.032
+margin_right = 1060.35
+margin_bottom = 822.032
+rect_scale = Vector2( 0.5, 0.5 )
 disabled = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -339,8 +552,8 @@ margin_top = 92.4559
 margin_right = 1556.46
 margin_bottom = 506.456
 rect_scale = Vector2( 0.2, 0.2 )
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 4 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -349,8 +562,8 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 113.118, 484.632 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 9 )
-script = ExtResource( 10 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -369,8 +582,8 @@ shape = SubResource( 12 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 401.269, 215.276 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 11 )
-script = ExtResource( 10 )
+texture = ExtResource( 8 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -389,8 +602,8 @@ shape = SubResource( 13 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 886.742, 497.122 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 12 )
-script = ExtResource( 10 )
+texture = ExtResource( 9 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -404,8 +617,8 @@ shape = SubResource( 11 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 492.377, 474.706 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 13 )
-script = ExtResource( 10 )
+texture = ExtResource( 10 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -419,8 +632,8 @@ shape = SubResource( 11 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 905.034, 399.071 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 14 )
-script = ExtResource( 10 )
+texture = ExtResource( 11 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -432,10 +645,10 @@ shape = SubResource( 11 )
 
 [node name="sorbete6" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 714.956, 361.97 )
+position = Vector2( 294.488, 412.744 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 15 )
-script = ExtResource( 10 )
+texture = ExtResource( 12 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -449,8 +662,8 @@ shape = SubResource( 11 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 553.07, 204.402 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 16 )
-script = ExtResource( 10 )
+texture = ExtResource( 13 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -464,8 +677,8 @@ shape = SubResource( 11 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 712.797, 202.243 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 17 )
-script = ExtResource( 10 )
+texture = ExtResource( 14 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -479,8 +692,8 @@ shape = SubResource( 11 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 712.797, 202.243 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 18 )
-script = ExtResource( 10 )
+texture = ExtResource( 15 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -494,12 +707,35 @@ shape = SubResource( 11 )
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 929.35, 200.476 )
 scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 19 )
+texture = ExtResource( 16 )
 
 [node name="barraObjetos" type="Sprite" parent="."]
 position = Vector2( 146.804, 200.849 )
 scale = Vector2( 0.395288, 0.45026 )
-texture = ExtResource( 8 )
+texture = ExtResource( 17 )
+
+[node name="vale" type="Sprite" parent="."]
+position = Vector2( 314.692, 478.332 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 18 )
+
+[node name="libro" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 645.748
+margin_top = 349.182
+margin_right = 963.748
+margin_bottom = 709.182
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="libro2" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 64.2807, 211.309 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 20 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
@@ -521,3 +757,4 @@ texture = ExtResource( 8 )
 [connection signal="mouse_exited" from="sorbete8/Area2D" to="sorbete8" method="_on_Area2D_mouse_exited"]
 [connection signal="mouse_entered" from="sorbete9/Area2D" to="sorbete9" method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="sorbete9/Area2D" to="sorbete9" method="_on_Area2D_mouse_exited"]
+[connection signal="pressed" from="libro" to="." method="_on_libro_pressed"]
