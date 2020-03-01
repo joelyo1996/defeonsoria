@@ -1,18 +1,19 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://asset/mapamudouuprsi.jpg" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://asset/spitemovepersonaje.png" type="Texture" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 [ext_resource path="res://asset/CuadroDeInformacion.png" type="Texture" id=5]
-[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=7]
-[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=8]
-[ext_resource path="res://asset/16 Exclamacion.png" type="Texture" id=9]
+[ext_resource path="res://asset/Valeria.png" type="Texture" id=6]
+[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=8]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=9]
+[ext_resource path="res://asset/16 Exclamacion.png" type="Texture" id=10]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
-
+var a = 0
 func _ready():
 	global.entrada_mapa = 1
 	if (global.entrada_mapa == 0):
@@ -31,10 +32,16 @@ func _on_botondialogo_button_up():
 		$AnimationExclamacion.play(\"exclamacion\")
 	
 	if (global.entrada_mapa == 1):
+		yield(get_tree().create_timer(2),\"timeout\")
 		$AnimationPlayer.play(\"cuadro_salir2\")
 		$AnimationExclamacion.play(\"exclamacio3\")
 		yield(get_tree().create_timer(2),\"timeout\")
 		$AnimationExclamacion.play(\"exclamacion\")
+		
+	if (global.entrada_mapa == 2):
+		$AnimationPlayer.play(\"CuadroSalir3\")
+		yield(get_tree().create_timer(3),\"timeout\")
+		
 	pass # Replace with function body.
 
 
@@ -43,9 +50,13 @@ func _on_Area2D_body_entered(Body):
 		get_tree().change_scene(\"res://primer_escena_el_conedor.tscn\")
 	if (global.entrada_mapa == 1):
 		$AnimationPlayer.play(\"texto3\")
-		$KinematicBody2D/CollisionShape2D.queue_free()
-		
+		yield(get_tree().create_timer(2),\"timeout\")
+	if (global.entrada_mapa == 2):
+		$AnimationPlayer.play(\"texto4\")
 	pass # Replace with function body.
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == \"texto3\":
+		global.entrada_mapa = global.entrada_mapa + 1
 "
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -113,7 +124,95 @@ extents = Vector2( 85.8588, 50.3277 )
 [sub_resource type="RectangleShape2D" id=8]
 
 [sub_resource type="DynamicFont" id=9]
-font_data = ExtResource( 6 )
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=19]
+resource_name = "CuadroSalir3"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("botondialogo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("textoDialogo3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("cuadroDialogo:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("emcargada:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("info:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 414.521, 286.297 ), Vector2( 900, 286.297 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("info:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("KinematicBody2D:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=10]
 resource_name = "cuadro_salir"
@@ -323,7 +422,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=14]
 resource_name = "texto3"
 length = 3.0
 tracks/0/type = "value"
@@ -386,9 +485,84 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("emcargada:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=14]
-resource_name = "exclamacio3"
+[sub_resource type="Animation" id=20]
+resource_name = "texto4"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("info:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KinematicBody2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("cuadroDialogo:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("botondialogo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("textoDialogo4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("info:modulate")
@@ -415,7 +589,7 @@ tracks/1/keys = {
 "values": [ Vector2( 414.521, 286.297 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=16]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -431,9 +605,9 @@ tracks/0/keys = {
 "values": [ Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 38.5249, 52.6423 )
 
 [node name="Node2D" type="Node2D"]
@@ -627,9 +801,15 @@ texture = ExtResource( 4 )
 
 [node name="cuadroDialogo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 526.485, 297.668 )
-scale = Vector2( 0.651784, 0.528523 )
+position = Vector2( 532.213, 297.668 )
+scale = Vector2( 0.660734, 0.528523 )
 texture = ExtResource( 5 )
+
+[node name="emcargada" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 222.907, 247.549 )
+scale = Vector2( 0.651784, 0.528523 )
+texture = ExtResource( 6 )
 
 [node name="textoDialogo" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 0 )
@@ -686,6 +866,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="textoDialogo4" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 258.0
+margin_top = 178.0
+margin_right = 980.0
+margin_bottom = 483.0
+custom_fonts/font = SubResource( 9 )
+text = "Las niñas, niños y adolescentes tienen derecho a preservar su identidad
+ y a que  sea respetada su propia imagen, dignidad y reputación, quedando
+ prohibida la difusión en medios de comunicación de imágenes, datos e
+ informaciones que permitan identificarlos de manera directa
+o indirecta contra su voluntad, la de sus padres o responsables.
+ (Convención sobre los Derechos del Niño, art. 8.) (Ley Nacional 
+N° 26.061 de Protección Integral de los Derechos de las Niñas,
+Niños y Adolescentes, art. 22)."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="botondialogo" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 647.541
@@ -693,34 +892,36 @@ margin_top = 334.563
 margin_right = 1123.54
 margin_bottom = 748.563
 rect_scale = Vector2( 0.3, 0.3 )
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 8 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/CuadroSalir3 = SubResource( 19 )
 anims/cuadro_salir = SubResource( 10 )
 anims/cuadro_salir2 = SubResource( 11 )
 anims/texto1 = SubResource( 12 )
 anims/texto2 = SubResource( 13 )
-anims/texto3 = SubResource( 18 )
+anims/texto3 = SubResource( 14 )
+anims/texto4 = SubResource( 20 )
 
 [node name="AnimationExclamacion" type="AnimationPlayer" parent="."]
-anims/exclamacio3 = SubResource( 14 )
-anims/exclamacion = SubResource( 15 )
-anims/exclamacion2 = SubResource( 16 )
+anims/exclamacio3 = SubResource( 15 )
+anims/exclamacion = SubResource( 16 )
+anims/exclamacion2 = SubResource( 17 )
 
 [node name="info" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 414.521, 286.297 )
+position = Vector2( 900, 286.297 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="Area2D" type="Area2D" parent="info"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="info/Area2D"]
 position = Vector2( 9.95142, 104.189 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 [connection signal="button_up" from="botondialogo" to="." method="_on_botondialogo_button_up"]
 [connection signal="body_entered" from="info/Area2D" to="." method="_on_Area2D_body_entered"]
