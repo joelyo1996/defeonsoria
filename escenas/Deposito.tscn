@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://escenas/Deposito.gd" type="Script" id=1]
+[ext_resource path="res://asset/fabrica2.jpg" type="Texture" id=2]
+[ext_resource path="res://asset/CuadroDeInformacion.png" type="Texture" id=3]
+[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=5]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Nueva animación"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CuadroInfo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "play"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CuadroInfo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureButton:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Deposito" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 510.97, 298.099 )
+scale = Vector2( 0.813152, 0.860487 )
+texture = ExtResource( 2 )
+
+[node name="CuadroInfo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 515.402, 298.957 )
+scale = Vector2( 0.781388, 0.71433 )
+texture = ExtResource( 3 )
+
+[node name="texto1" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 189.0
+margin_top = 235.134
+margin_right = 884.0
+margin_bottom = 653.134
+custom_fonts/font = SubResource( 1 )
+text = "“Las cajas irán cayendo. Empuja las de tornillos hacia la derecha y
+ las de tuercas hacia la izquierda. Si necesitas levantar alguna,
+ haz click cuando la estés empujando y para arrojarla haz
+click nuevamente. Para saltar presiona espacio. Logra ubicar 10 
+cajas correctamente de cada lado. El cronómetro marcará cuanto
+ tardaste en completar el puzle."
+percent_visible = -0.00340136
+
+[node name="TextureButton" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 736.146
+margin_top = 430.615
+margin_right = 1212.15
+margin_bottom = 844.615
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+"anims/Nueva animación" = SubResource( 2 )
+anims/play = SubResource( 3 )
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
