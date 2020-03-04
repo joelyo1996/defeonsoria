@@ -13,7 +13,7 @@
 [ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=11]
 [ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=12]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "salirEscena"
 length = 2.0
 tracks/0/type = "value"
@@ -41,8 +41,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "texto1"
+[sub_resource type="Animation" id=2]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cuadroTexto:modulate")
@@ -117,7 +116,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
@@ -148,8 +147,8 @@ scale = Vector2( 0.278375, 0.228909 )
 texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/salirEscena = SubResource( 3 )
-anims/texto1 = SubResource( 1 )
+anims/salirEscena = SubResource( 1 )
+anims/texto1 = SubResource( 2 )
 
 [node name="texto1" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -157,7 +156,7 @@ margin_left = 23.1264
 margin_top = 63.883
 margin_right = 749.126
 margin_bottom = 175.883
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Ya sé a qué venís, pero recién llegaron unas cajas con tornillos y tuercas que debo
 ordenar en el depósito. Si me das una mano, seguro terminamos rápido para poder charlar"
 

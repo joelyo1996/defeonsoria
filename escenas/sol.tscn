@@ -4,6 +4,5 @@
 [ext_resource path="res://escenas/sol.gd" type="Script" id=2]
 
 [node name="sol" type="Sprite"]
-position = Vector2( -467.136, -559.222 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )

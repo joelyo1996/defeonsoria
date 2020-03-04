@@ -1,15 +1,21 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://escenas/Deposito.gd" type="Script" id=1]
-[ext_resource path="res://asset/fabrica2.jpg" type="Texture" id=2]
-[ext_resource path="res://asset/CuadroDeInformacion.png" type="Texture" id=3]
-[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=5]
-[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=6]
+[ext_resource path="res://escenas/cajatuerca.tscn" type="PackedScene" id=2]
+[ext_resource path="res://asset/fabrica2.jpg" type="Texture" id=3]
+[ext_resource path="res://asset/CuadroDeInformacion.png" type="Texture" id=4]
+[ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=6]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=7]
+[ext_resource path="res://asset/cajarnaise.png" type="Texture" id=8]
+[ext_resource path="res://asset/cajartres.png" type="Texture" id=9]
+[ext_resource path="res://icon.png" type="Texture" id=10]
+[ext_resource path="res://escenas/Position2D.gd" type="Script" id=11]
+[ext_resource path="res://escenas/Position1.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Nueva animación"
@@ -91,19 +97,33 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="Deposito" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 64.3993, 67.0416 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 548.358, 10 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+
+[node name="Deposito" type="Node2D" groups=[
+"main",
+]]
 script = ExtResource( 1 )
+npc = ExtResource( 2 )
 
 [node name="fondo" type="Sprite" parent="."]
 position = Vector2( 510.97, 298.099 )
 scale = Vector2( 0.813152, 0.860487 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="CuadroInfo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 515.402, 298.957 )
 scale = Vector2( 0.781388, 0.71433 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="texto1" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 0 )
@@ -118,7 +138,9 @@ text = "“Las cajas irán cayendo. Empuja las de tornillos hacia la derecha y
 click nuevamente. Para saltar presiona espacio. Logra ubicar 10 
 cajas correctamente de cada lado. El cronómetro marcará cuanto
  tardaste en completar el puzle."
-percent_visible = -0.00340136
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureButton" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -127,10 +149,119 @@ margin_top = 430.615
 margin_right = 1212.15
 margin_bottom = 844.615
 rect_scale = Vector2( 0.3, 0.3 )
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Nueva animación" = SubResource( 2 )
 anims/play = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 518.982, -97.7297 )
+texture = ExtResource( 8 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 290.889, -89.3656 )
+texture = ExtResource( 8 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.435294 )
+position = Vector2( 77.3676, 530.697 )
+texture = ExtResource( 9 )
+
+[node name="Area2D" type="Area2D" parent="Sprite7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite7/Area2D"]
+shape = SubResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 660.837, -104.546 )
+texture = ExtResource( 8 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 811.782, -107.664 )
+texture = ExtResource( 8 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.490196 )
+position = Vector2( 954.616, 531.818 )
+texture = ExtResource( 8 )
+
+[node name="RigidBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 521.998, 608.749 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+visible = false
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 924.943
+margin_top = 38.1722
+margin_right = 990.943
+margin_bottom = 52.1722
+custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 370.035, -250.443 )
+script = ExtResource( 11 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position2D"]
+
+[node name="Position1" type="Position2D" parent="."]
+position = Vector2( 224.32, -251.697 )
+script = ExtResource( 12 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position1"]
+
+[node name="Position2" type="Position2D" parent="."]
+position = Vector2( 514.447, -243.288 )
+script = ExtResource( 12 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position2"]
+
+[node name="Position3" type="Position2D" parent="."]
+position = Vector2( 653.203, -239.083 )
+script = ExtResource( 12 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position3"]
+
+[node name="Position4" type="Position2D" parent="."]
+position = Vector2( 808.779, -234.878 )
+script = ExtResource( 12 )
+npc = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="Position4"]
+
+[node name="cajatuerca" parent="." instance=ExtResource( 2 )]
+position = Vector2( -238.048, -123.241 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 523.679, 512.295 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="body_entered" from="Sprite7/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Position2D/Timer" to="Position2D" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position1/Timer" to="Position1" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position2/Timer" to="Position2" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position3/Timer" to="Position3" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position4/Timer" to="Position4" method="_on_Timer_timeout"]

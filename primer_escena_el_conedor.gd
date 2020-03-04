@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var tiempo = "0"
 var side = false
 func _ready():
 	if (global.entrada_comedor == 0):
@@ -23,12 +23,18 @@ func dialogo():
 		
 		
 		pass
-		
 	if global.contadordialogo == 3:
 		
-		$AnimationPlayer.play("anim7")
-		pass
+		$AnimationPlayer.play("anim10")
 	if global.contadordialogo == 4:
+		yield(get_tree().create_timer(2),"timeout")
+		get_tree().change_scene("res://escenas/pizarron1.tscn")
+	if global.contadordialogo == 5:
+		
+		$AnimationPlayer.play("anim7")
+		$Timer.start()
+		pass
+	if global.contadordialogo == 6:
 		
 		$AnimationPlayer.play("anim8")
 		global.entrada_mapa = 1
@@ -38,8 +44,9 @@ func dialogo():
 		
 		pass
 func _on_Button_pressed():
-	yield(get_tree().create_timer(1),"timeout")
-	get_tree().change_scene("res://escenas/pizarron1.tscn")
+	$AnimationPlayer.play("anim9")
+	
+	
 	pass
 	
 func _on_TextureButton_pressed():
@@ -84,3 +91,11 @@ func _on_sorvete1_input_event(viewport, event, shape_idx):
 func _on_libro_pressed():
 	$AnimationPlayer.play("anim6")
 	pass # Replace with function body.
+
+
+func _on_Timer_timeout():
+	
+	pass # Replace with function body.
+	
+func _physics_process(delta):
+	$crono.text = tiempo

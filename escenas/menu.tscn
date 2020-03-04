@@ -15,12 +15,12 @@
 [ext_resource path="res://asset/Botonsalirnormal.png" type="Texture" id=13]
 [ext_resource path="res://asset/Botonsalirprecionado.png" type="Texture" id=14]
 [ext_resource path="res://asset/creditos.png" type="Texture" id=15]
-[ext_resource path="res://asset/02.png" type="Texture" id=16]
-[ext_resource path="res://asset/Splash Screen Defensoria.png" type="Texture" id=17]
-[ext_resource path="res://asset/01.png" type="Texture" id=18]
-[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=19]
-[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=20]
-[ext_resource path="res://asset/Colored Crayons.ttf" type="DynamicFontData" id=21]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=16]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=17]
+[ext_resource path="res://asset/Colored Crayons.ttf" type="DynamicFontData" id=18]
+[ext_resource path="res://asset/LogoDepartamento.png" type="Texture" id=19]
+[ext_resource path="res://asset/logodefensoria.png" type="Texture" id=20]
+[ext_resource path="res://asset/LogoUNPAZ.png" type="Texture" id=21]
 
 [sub_resource type="Animation" id=1]
 resource_name = "animacion_sc"
@@ -66,7 +66,7 @@ tracks/1/keys = {
 "values": [ Vector2( 57.6519, 605.481 ), Vector2( 52.5043, 47.5824 ), Vector2( 52.5043, 47.5824 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Button:modulate")
+tracks/2/path = NodePath("PanelContainer/Button:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -78,7 +78,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Label:modulate")
+tracks/3/path = NodePath("PanelContainer/Label:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -90,7 +90,7 @@ tracks/3/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("tex_creditos:modulate")
+tracks/4/path = NodePath("PanelContainer/tex_creditos:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -236,7 +236,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Button:modulate")
+tracks/2/path = NodePath("PanelContainer/Button:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -248,7 +248,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Label:modulate")
+tracks/3/path = NodePath("PanelContainer/Label:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -260,7 +260,7 @@ tracks/3/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("tex_creditos:modulate")
+tracks/4/path = NodePath("PanelContainer/tex_creditos:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -273,9 +273,9 @@ tracks/4/keys = {
 }
 
 [sub_resource type="DynamicFont" id=7]
-size = 25
+size = 40
 outline_color = Color( 1, 1, 1, 0 )
-font_data = ExtResource( 21 )
+font_data = ExtResource( 18 )
 
 [node name="menu" type="Node2D"]
 script = ExtResource( 1 )
@@ -321,6 +321,7 @@ texture = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="sol" parent="fondo" instance=ExtResource( 5 )]
+position = Vector2( -685.467, -510.027 )
 
 [node name="logo" type="Sprite" parent="fondo"]
 texture = ExtResource( 6 )
@@ -357,51 +358,34 @@ margin_bottom = 936.354
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 14 )
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 70.5294
-margin_top = 710.908
-margin_right = 996.53
-margin_bottom = 1223.91
+position = Vector2( 511.791, 313.096 )
+scale = Vector2( 0.339031, 0.307852 )
+texture = ExtResource( 15 )
 
 [node name="Sprite" type="Sprite" parent="PanelContainer"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 449.87, 249.928 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 15 )
 
-[node name="departamento" type="Sprite" parent="."]
-position = Vector2( 533.14, 702.735 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 16 )
-
-[node name="defensoria" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.944787 )
-position = Vector2( 1208.73, 359.627 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 17 )
-
-[node name="unpaz" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.944787 )
-position = Vector2( -191.517, 360 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 18 )
-
-[node name="Button" type="TextureButton" parent="."]
+[node name="Button" type="TextureButton" parent="PanelContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 598.447
-margin_top = 398.449
-margin_right = 1074.45
-margin_bottom = 812.449
-rect_scale = Vector2( 0.3, 0.3 )
-texture_normal = ExtResource( 19 )
-texture_pressed = ExtResource( 20 )
+margin_left = 255.599
+margin_top = 277.254
+margin_right = 731.602
+margin_bottom = 691.254
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="PanelContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 277.984
-margin_top = 215.336
-margin_right = 922.984
-margin_bottom = 635.336
+margin_left = -689.632
+margin_top = -317.554
+margin_right = -44.6322
+margin_bottom = 102.446
 custom_fonts/font = SubResource( 7 )
 text = "Game Design												                            
 Nestor Arriola														                    
@@ -412,13 +396,16 @@ Programador
 Joel Bello
 
 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="tex_creditos" type="Label" parent="."]
+[node name="tex_creditos" type="Label" parent="PanelContainer"]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 539.807
-margin_top = 202.748
-margin_right = 1184.81
-margin_bottom = 622.748
+margin_left = 82.6354
+margin_top = -358.444
+margin_right = 727.638
+margin_bottom = 61.5563
 custom_fonts/font = SubResource( 7 )
 text = "Artistas
 Prisila Scavino
@@ -428,9 +415,26 @@ Enzo
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="departamento" type="Sprite" parent="."]
+position = Vector2( 533.14, 702.735 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 19 )
+
+[node name="defensoria" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.944787 )
+position = Vector2( 1208.73, 359.627 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 20 )
+
+[node name="unpaz" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.945098 )
+position = Vector2( -191.517, 360 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 21 )
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="fondo/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="fondo/sonido" to="." method="_on_sonido_pressed"]
 [connection signal="pressed" from="fondo/info" to="." method="_on_info_pressed"]
 [connection signal="pressed" from="fondo/salir" to="." method="_on_salir_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="PanelContainer/Button" to="." method="_on_Button_pressed"]
