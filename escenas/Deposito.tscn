@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://escenas/Deposito.gd" type="Script" id=1]
 [ext_resource path="res://escenas/cajatuerca.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://icon.png" type="Texture" id=10]
 [ext_resource path="res://escenas/Position2D.gd" type="Script" id=11]
 [ext_resource path="res://escenas/Position1.gd" type="Script" id=12]
+[ext_resource path="res://escenas/KinematicBody2D.gd" type="Script" id=13]
+[ext_resource path="res://asset/stickmanSpriteSheet.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -56,10 +58,22 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("KinematicBody2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "play"
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CuadroInfo:modulate")
 tracks/0/interp = 1
@@ -96,6 +110,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("KinematicBody2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 64.3993, 67.0416 )
@@ -107,6 +133,39 @@ extents = Vector2( 548.358, 10 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10, 62.018 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "caminar"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "saltar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
 
 [node name="Deposito" type="Node2D" groups=[
 "main",
@@ -164,14 +223,14 @@ texture = ExtResource( 8 )
 position = Vector2( 290.889, -89.3656 )
 texture = ExtResource( 8 )
 
-[node name="Sprite7" type="Sprite" parent="."]
+[node name="PocicionarTuercas" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.435294 )
 position = Vector2( 77.3676, 530.697 )
 texture = ExtResource( 9 )
 
-[node name="Area2D" type="Area2D" parent="Sprite7"]
+[node name="Area2D" type="Area2D" parent="PocicionarTuercas"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite7/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PocicionarTuercas/Area2D"]
 shape = SubResource( 4 )
 
 [node name="Sprite3" type="Sprite" parent="."]
@@ -249,7 +308,9 @@ npc = ExtResource( 2 )
 position = Vector2( -238.048, -123.241 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 523.679, 512.295 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 523.049, 514.186 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -258,8 +319,15 @@ __meta__ = {
 shape = SubResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 14 )
+vframes = 2
+hframes = 4
+
+[node name="Animationpersonaje" type="AnimationPlayer" parent="KinematicBody2D"]
+anims/caminar = SubResource( 8 )
+anims/saltar = SubResource( 9 )
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="body_entered" from="Sprite7/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="PocicionarTuercas/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Position2D/Timer" to="Position2D" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position1/Timer" to="Position1" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position2/Timer" to="Position2" method="_on_Timer_timeout"]
