@@ -8,9 +8,10 @@ func _physics_process(delta):
 	if Input.is_action_pressed("saltar"):
 		move.y = -salto
 		$Animationpersonaje.play("saltar")
-		yield(get_tree().create_timer(2),"timeout")
+		yield(get_tree().create_timer(1),"timeout")
 		move.y = +salto
-		salto = 0
+		yield(get_tree().create_timer(2),"timeout")
+		salto = 300
 	if Input.is_action_pressed("derecha"):
 		move.x = spee
 		$Animationpersonaje.play("caminar")

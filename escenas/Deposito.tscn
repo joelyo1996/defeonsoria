@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://escenas/Deposito.gd" type="Script" id=1]
 [ext_resource path="res://escenas/cajatuerca.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://escenas/Position1.gd" type="Script" id=12]
 [ext_resource path="res://escenas/KinematicBody2D.gd" type="Script" id=13]
 [ext_resource path="res://asset/stickmanSpriteSheet.png" type="Texture" id=14]
+[ext_resource path="res://Fuentes/Fuente1.ttf" type="DynamicFontData" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -123,6 +124,70 @@ tracks/3/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=11]
+resource_name = "stop"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CuadroInfo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("crono:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 23.7432, 12.9508 ), Vector2( 679.437, 226.993 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("crono:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("crono:custom_fonts/font:outline_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 64.3993, 67.0416 )
 
@@ -167,6 +232,10 @@ tracks/0/keys = {
 "values": [ 0, 1, 0 ]
 }
 
+[sub_resource type="DynamicFont" id=10]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 15 )
+
 [node name="Deposito" type="Node2D" groups=[
 "main",
 ]]
@@ -201,6 +270,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="texto2" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 189.0
+margin_top = 235.134
+margin_right = 884.0
+margin_bottom = 653.134
+custom_fonts/font = SubResource( 1 )
+text = "El tiempo que tardaste en ayudar a Adolfo fue de               segundos
+
+Buen trabajo."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureButton" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = 736.146
@@ -214,6 +297,7 @@ texture_pressed = ExtResource( 7 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Nueva animación" = SubResource( 2 )
 anims/play = SubResource( 3 )
+anims/stop = SubResource( 11 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 518.982, -97.7297 )
@@ -305,15 +389,12 @@ npc = ExtResource( 2 )
 [node name="Timer" type="Timer" parent="Position4"]
 
 [node name="cajatuerca" parent="." instance=ExtResource( 2 )]
-position = Vector2( -238.048, -123.241 )
+position = Vector2( 923.211, 217.798 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 523.049, 514.186 )
 script = ExtResource( 13 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 shape = SubResource( 7 )
@@ -326,6 +407,17 @@ hframes = 4
 [node name="Animationpersonaje" type="AnimationPlayer" parent="KinematicBody2D"]
 anims/caminar = SubResource( 8 )
 anims/saltar = SubResource( 9 )
+
+[node name="crono" type="Label" parent="." groups=[
+"tiempo",
+]]
+margin_left = 23.7432
+margin_top = 12.9508
+margin_right = 63.7432
+margin_bottom = 37.9508
+custom_fonts/font = SubResource( 10 )
+
+[node name="Timer" type="Timer" parent="crono"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="body_entered" from="PocicionarTuercas/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="timeout" from="Position2D/Timer" to="Position2D" method="_on_Timer_timeout"]
@@ -333,3 +425,4 @@ anims/saltar = SubResource( 9 )
 [connection signal="timeout" from="Position2/Timer" to="Position2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position3/Timer" to="Position3" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position4/Timer" to="Position4" method="_on_Timer_timeout"]
+[connection signal="timeout" from="crono/Timer" to="." method="_on_Timer_timeout"]
