@@ -6,8 +6,8 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	global.newEnemigo = npc.instance()
-	get_tree().get_nodes_in_group("main")[0].add_child(global.newEnemigo)
+	global.tornillo = npc.instance()
+	get_tree().get_nodes_in_group("main")[0].add_child(global.tornillo)
 	
-	global.newEnemigo.global_position = global_position 
+	global.tornillo.global_position = global_position 
 	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://escenas/Deposito.gd" type="Script" id=1]
 [ext_resource path="res://escenas/cajatuerca.tscn" type="PackedScene" id=2]
@@ -12,9 +12,10 @@
 [ext_resource path="res://icon.png" type="Texture" id=10]
 [ext_resource path="res://escenas/Position2D.gd" type="Script" id=11]
 [ext_resource path="res://escenas/Position1.gd" type="Script" id=12]
-[ext_resource path="res://escenas/KinematicBody2D.gd" type="Script" id=13]
-[ext_resource path="res://asset/stickmanSpriteSheet.png" type="Texture" id=14]
-[ext_resource path="res://Fuentes/Fuente1.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://escenas/tornillo.tscn" type="PackedScene" id=13]
+[ext_resource path="res://escenas/KinematicBody2D.gd" type="Script" id=14]
+[ext_resource path="res://asset/stickmanSpriteSheet.png" type="Texture" id=15]
+[ext_resource path="res://Fuentes/Fuente1.ttf" type="DynamicFontData" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -71,6 +72,30 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("texto2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("crono:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "play"
@@ -123,9 +148,48 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("crono:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("crono:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 14.5553, 9.35188 ), Vector2( 14.5553, 9.35188 ) ]
+}
 
-[sub_resource type="Animation" id=11]
-resource_name = "stop"
+[sub_resource type="Animation" id=4]
+resource_name = "salir"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("CuadroInfo:modulate")
@@ -187,21 +251,47 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Color( 0, 0, 0, 1 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("KinematicBody2D:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TextureButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 64.3993, 67.0416 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 67.6656, 67.4962 )
+
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 548.358, 10 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=9]
 font_data = ExtResource( 5 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 10, 62.018 )
 
-[sub_resource type="Animation" id=8]
-resource_name = "caminar"
+[sub_resource type="Animation" id=11]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -217,8 +307,7 @@ tracks/0/keys = {
 "values": [ 4, 5, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "saltar"
+[sub_resource type="Animation" id=12]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -232,9 +321,9 @@ tracks/0/keys = {
 "values": [ 0, 1, 0 ]
 }
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=13]
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 15 )
+font_data = ExtResource( 16 )
 
 [node name="Deposito" type="Node2D" groups=[
 "main",
@@ -297,7 +386,8 @@ texture_pressed = ExtResource( 7 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 "anims/Nueva animación" = SubResource( 2 )
 anims/play = SubResource( 3 )
-anims/stop = SubResource( 11 )
+anims/salir = SubResource( 4 )
+anims/stop = SubResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 518.982, -97.7297 )
@@ -312,10 +402,10 @@ modulate = Color( 1, 1, 1, 0.435294 )
 position = Vector2( 77.3676, 530.697 )
 texture = ExtResource( 9 )
 
-[node name="Area2D" type="Area2D" parent="PocicionarTuercas"]
+[node name="caja" type="Area2D" parent="PocicionarTuercas"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PocicionarTuercas/Area2D"]
-shape = SubResource( 4 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PocicionarTuercas/caja"]
+shape = SubResource( 6 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 660.837, -104.546 )
@@ -325,10 +415,15 @@ texture = ExtResource( 8 )
 position = Vector2( 811.782, -107.664 )
 texture = ExtResource( 8 )
 
-[node name="Sprite6" type="Sprite" parent="."]
+[node name="pocicionarTornillo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.490196 )
-position = Vector2( 954.616, 531.818 )
+position = Vector2( 953.109, 533.325 )
 texture = ExtResource( 8 )
+
+[node name="AreapocicionarTornillo" type="Area2D" parent="pocicionarTornillo"]
+
+[node name="CollisionpocicionarTornillo" type="CollisionShape2D" parent="pocicionarTornillo/AreapocicionarTornillo"]
+shape = SubResource( 7 )
 
 [node name="RigidBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 521.998, 608.749 )
@@ -337,7 +432,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="RigidBody2D"]
 visible = false
@@ -348,7 +443,7 @@ margin_left = 924.943
 margin_top = 38.1722
 margin_right = 990.943
 margin_bottom = 52.1722
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -388,41 +483,83 @@ npc = ExtResource( 2 )
 
 [node name="Timer" type="Timer" parent="Position4"]
 
+[node name="Position5" type="Position2D" parent="."]
+position = Vector2( 807.272, -326.826 )
+script = ExtResource( 12 )
+npc = ExtResource( 13 )
+
+[node name="Timer" type="Timer" parent="Position5"]
+
+[node name="Position6" type="Position2D" parent="."]
+position = Vector2( 652.77, -326.826 )
+script = ExtResource( 12 )
+npc = ExtResource( 13 )
+
+[node name="Timer" type="Timer" parent="Position6"]
+
+[node name="Position7" type="Position2D" parent="."]
+position = Vector2( 509.63, -317.738 )
+script = ExtResource( 12 )
+npc = ExtResource( 13 )
+
+[node name="Timer" type="Timer" parent="Position7"]
+
+[node name="Position8" type="Position2D" parent="."]
+position = Vector2( 368.761, -308.649 )
+script = ExtResource( 12 )
+npc = ExtResource( 13 )
+
+[node name="Timer" type="Timer" parent="Position8"]
+
+[node name="Position9" type="Position2D" parent="."]
+position = Vector2( 223.348, -313.194 )
+script = ExtResource( 12 )
+npc = ExtResource( 13 )
+
+[node name="Timer" type="Timer" parent="Position9"]
+
 [node name="cajatuerca" parent="." instance=ExtResource( 2 )]
-position = Vector2( 923.211, 217.798 )
+position = Vector2( 1123.69, 214.783 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 523.049, 514.186 )
-script = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-shape = SubResource( 7 )
+shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 vframes = 2
 hframes = 4
 
 [node name="Animationpersonaje" type="AnimationPlayer" parent="KinematicBody2D"]
-anims/caminar = SubResource( 8 )
-anims/saltar = SubResource( 9 )
+anims/caminar = SubResource( 11 )
+anims/saltar = SubResource( 12 )
 
 [node name="crono" type="Label" parent="." groups=[
 "tiempo",
 ]]
-margin_left = 23.7432
-margin_top = 12.9508
-margin_right = 63.7432
-margin_bottom = 37.9508
-custom_fonts/font = SubResource( 10 )
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 14.5553
+margin_top = 9.35188
+margin_right = 54.5553
+margin_bottom = 34.3519
+custom_fonts/font = SubResource( 13 )
 
 [node name="Timer" type="Timer" parent="crono"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="body_entered" from="PocicionarTuercas/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="PocicionarTuercas/caja" to="." method="_on_caja_area_entered"]
+[connection signal="area_entered" from="pocicionarTornillo/AreapocicionarTornillo" to="." method="_on_AreapocicionarTornillo_area_entered"]
 [connection signal="timeout" from="Position2D/Timer" to="Position2D" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position1/Timer" to="Position1" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position2/Timer" to="Position2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position3/Timer" to="Position3" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Position4/Timer" to="Position4" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position5/Timer" to="Position5" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position6/Timer" to="Position6" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position7/Timer" to="Position7" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position8/Timer" to="Position8" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Position9/Timer" to="Position9" method="_on_Timer_timeout"]
 [connection signal="timeout" from="crono/Timer" to="." method="_on_Timer_timeout"]

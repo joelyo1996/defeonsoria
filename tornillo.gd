@@ -1,13 +1,12 @@
 extends RigidBody2D
 
-
 func _ready():
 	pass
 func _physics_process(delta):
 	if global.con == 0 :
 		queue_free()
 
-func _on_arriba_area_entered(area):
+func _on_areaTornilloArriba_area_entered(area):
 	if area.name == "abajo":
 		queue_free()
 	if area.name == "areaTornilloAbajo":
@@ -15,7 +14,7 @@ func _on_arriba_area_entered(area):
 	pass # Replace with function body.
 
 
-func _on_abajo_area_entered(area):
+func _on_areaTornilloAbajo_area_entered(area):
 	if area.name == "caja":
 		queue_free()
 	if area.name == "arriba":
@@ -24,9 +23,4 @@ func _on_abajo_area_entered(area):
 		queue_free()
 	if area.name == "AreapocicionarTornillo":
 		queue_free()
-	pass # Replace with function body.
-
-
-func _on_Area2D_body_entered(body):
-	queue_free()
 	pass # Replace with function body.

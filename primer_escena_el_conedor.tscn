@@ -81,7 +81,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 0.054902, 0.0509804, 0.0509804, 0 ), Color( 0.054902, 0.0509804, 0.0509804, 1 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=4]
 resource_name = "anim10"
 length = 2.0
 tracks/0/type = "value"
@@ -109,7 +109,7 @@ tracks/1/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 tracks/0/type = "value"
 tracks/0/path = NodePath("cuadrotexto/texto1:modulate")
 tracks/0/interp = 1
@@ -123,8 +123,7 @@ tracks/0/keys = {
 "values": [ Color( 0.054902, 0.0509804, 0.0509804, 1 ), Color( 0.054902, 0.0509804, 0.0509804, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "anim5"
+[sub_resource type="Animation" id=6]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cuadrotexto/texto5:modulate")
@@ -151,8 +150,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "anim6"
+[sub_resource type="Animation" id=7]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("libro:modulate")
@@ -215,8 +213,7 @@ tracks/4/keys = {
 "values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "anim7"
+[sub_resource type="Animation" id=8]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cuadrotexto/texto6:modulate")
@@ -243,8 +240,7 @@ tracks/1/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "anim8"
+[sub_resource type="Animation" id=9]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cuadrotexto/texto7:modulate")
@@ -283,8 +279,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "anim9"
+[sub_resource type="Animation" id=10]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cuadrotexto/texto3:modulate")
@@ -431,8 +426,7 @@ tracks/11/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "bebe"
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("sorbete8:modulate")
 tracks/0/interp = 1
@@ -566,16 +560,16 @@ tracks/10/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 222.974, 206.448 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 46.6176, 61.5756 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 104.106, 82.3149 )
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=15]
 font_data = ExtResource( 21 )
 
 [node name="Node2D" type="Node2D"]
@@ -728,14 +722,14 @@ scale = Vector2( 2.0479, 2.27606 )
 anims/amin3 = SubResource( 1 )
 anims/amin4 = SubResource( 2 )
 anims/anim1 = SubResource( 3 )
-anims/anim10 = SubResource( 15 )
-anims/anim2 = SubResource( 4 )
-anims/anim5 = SubResource( 5 )
-anims/anim6 = SubResource( 6 )
-anims/anim7 = SubResource( 7 )
-anims/anim8 = SubResource( 8 )
-anims/anim9 = SubResource( 9 )
-anims/bebe = SubResource( 10 )
+anims/anim10 = SubResource( 4 )
+anims/anim2 = SubResource( 5 )
+anims/anim5 = SubResource( 6 )
+anims/anim6 = SubResource( 7 )
+anims/anim7 = SubResource( 8 )
+anims/anim8 = SubResource( 9 )
+anims/anim9 = SubResource( 10 )
+anims/bebe = SubResource( 11 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 938.463
@@ -763,12 +757,12 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete1/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="sorbete1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete1/StaticBody2D"]
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="sorbete2" type="Sprite" parent="."]
 editor/display_folded = true
@@ -784,12 +778,12 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete2/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="sorbete2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete2/StaticBody2D"]
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="sorbete3" type="Sprite" parent="."]
 editor/display_folded = true
@@ -805,7 +799,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete3/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="sorbete4" type="Sprite" parent="."]
 editor/display_folded = true
@@ -821,7 +815,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete4/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="sorbete5" type="Sprite" parent="."]
 editor/display_folded = true
@@ -837,7 +831,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete5/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="sorbete6" type="Sprite" parent="."]
 editor/display_folded = true
@@ -853,7 +847,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete6/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="sorbete7" type="Sprite" parent="."]
 editor/display_folded = true
@@ -869,7 +863,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete7/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="sorbete8" type="Sprite" parent="."]
 editor/display_folded = true
@@ -885,7 +879,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete8"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete8/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="sorbete9" type="Sprite" parent="."]
 editor/display_folded = true
@@ -901,7 +895,7 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete9"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete9/Area2D"]
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="referencias" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -940,7 +934,7 @@ texture = ExtResource( 20 )
 [node name="crono" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 15 )
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

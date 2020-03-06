@@ -28,6 +28,7 @@ func dialogo():
 		$AnimationPlayer.play("anim10")
 	if global.contadordialogo == 4:
 		yield(get_tree().create_timer(2),"timeout")
+		global.entradaspizzaron = 0
 		get_tree().change_scene("res://escenas/pizarron1.tscn")
 	if global.contadordialogo == 5:
 		
