@@ -5,7 +5,7 @@ var opc2 = false
 var opc3 = false
 var opcion
 func _ready():
-	global.entradaspizzaron = 1
+	
 	if global.entradaspizzaron == 0:
 		$AnimationPlayer.play("entrada1")
 	if global.entradaspizzaron == 1:

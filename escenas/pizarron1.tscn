@@ -27,7 +27,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=3]
 resource_name = "entrada1"
 length = 2.0
 tracks/0/type = "value"
@@ -199,7 +199,7 @@ tracks/13/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=4]
 resource_name = "entrada2"
 length = 2.0
 tracks/0/type = "value"
@@ -383,7 +383,7 @@ tracks/14/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("titulo:modulate")
@@ -446,7 +446,7 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=6]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("opcion1:rect_position")
@@ -509,8 +509,7 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "opcion2"
+[sub_resource type="Animation" id=7]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("opcion3:modulate")
@@ -585,8 +584,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "opcion2_salir"
+[sub_resource type="Animation" id=8]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Derecho_preguntas:modulate")
@@ -649,8 +647,7 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "opcion3"
+[sub_resource type="Animation" id=9]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("titulo:modulate")
@@ -725,8 +722,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "opcion3_salir"
+[sub_resource type="Animation" id=10]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Derecho_opinar:modulate")
@@ -801,7 +797,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=11]
 resource_name = "opcion4"
 length = 2.0
 tracks/0/type = "value"
@@ -901,7 +897,7 @@ tracks/7/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=12]
 resource_name = "opcion4Salir"
 length = 3.0
 tracks/0/type = "value"
@@ -1001,7 +997,7 @@ tracks/7/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=13]
 resource_name = "opcion5"
 length = 3.0
 tracks/0/type = "value"
@@ -1089,7 +1085,7 @@ tracks/6/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=14]
 resource_name = "opcion5_salir"
 length = 3.0
 tracks/0/type = "value"
@@ -1165,7 +1161,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=15]
 resource_name = "opcion6"
 length = 3.0
 tracks/0/type = "value"
@@ -1241,7 +1237,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=16]
 resource_name = "opcion6_salir"
 length = 3.0
 tracks/0/type = "value"
@@ -1317,7 +1313,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=17]
 size = 20
 font_data = ExtResource( 4 )
 
@@ -1465,20 +1461,20 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/boton_salir = SubResource( 2 )
-anims/entrada1 = SubResource( 10 )
-anims/entrada2 = SubResource( 11 )
-anims/opcion1 = SubResource( 3 )
-anims/opcion1_salir = SubResource( 4 )
-anims/opcion2 = SubResource( 5 )
-anims/opcion2_salir = SubResource( 6 )
-anims/opcion3 = SubResource( 7 )
-anims/opcion3_salir = SubResource( 8 )
-anims/opcion4 = SubResource( 12 )
-anims/opcion4Salir = SubResource( 13 )
-anims/opcion5 = SubResource( 14 )
-anims/opcion5_salir = SubResource( 15 )
-anims/opcion6 = SubResource( 16 )
-anims/opcion6_salir = SubResource( 17 )
+anims/entrada1 = SubResource( 3 )
+anims/entrada2 = SubResource( 4 )
+anims/opcion1 = SubResource( 5 )
+anims/opcion1_salir = SubResource( 6 )
+anims/opcion2 = SubResource( 7 )
+anims/opcion2_salir = SubResource( 8 )
+anims/opcion3 = SubResource( 9 )
+anims/opcion3_salir = SubResource( 10 )
+anims/opcion4 = SubResource( 11 )
+anims/opcion4Salir = SubResource( 12 )
+anims/opcion5 = SubResource( 13 )
+anims/opcion5_salir = SubResource( 14 )
+anims/opcion6 = SubResource( 15 )
+anims/opcion6_salir = SubResource( 16 )
 
 [node name="IntercambiarIdeas" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -1486,7 +1482,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 17 )
 text = "Al intercambiar ideas con otras personas,
  formamos lazos con ellas. Podemos discutir y encontrar la forma de
  mejorar nuestro entorno."
@@ -1500,7 +1496,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 261.391
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 17 )
 text = "Informar, compartir la información, 
 
 uno de los pilares de cualquier comunidad."
@@ -1514,7 +1510,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 17 )
 text = "Todos y todas tenemos derecho a hacer preguntas. 
 Al encontrar las respuestas nos hacemos más sabios."
 __meta__ = {
@@ -1527,7 +1523,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 17 )
 text = "Todos y todas tenemos derecho a informarnos para no opinar sin
 
  fundamentos."
@@ -1541,7 +1537,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 17 )
 text = "Todos tenemos derecho a ser partícipes
 
  de los medios de comunicación, evitando
@@ -1557,7 +1553,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 17 )
 text = "Todos y todas tenemos derecho a opinar, 
 aún más cuando es sobre un tema que nos afecta"
 __meta__ = {

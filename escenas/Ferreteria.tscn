@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://escenas/Ferreteria.gd" type="Script" id=1]
 [ext_resource path="res://asset/fabrica.jpg" type="Texture" id=2]
@@ -13,6 +13,106 @@
 [ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=11]
 [ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=12]
 [ext_resource path="res://asset/libro2.png" type="Texture" id=13]
+
+[sub_resource type="Animation" id=6]
+resource_name = "cuaderno2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cuadroTexto:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("barraObjeto:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("cuaderno:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("cuaderno2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite_Cuaderno:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("texto4:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("texto3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TextureButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "salirEscena"
@@ -301,7 +401,7 @@ tracks/14/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "texto3"
 length = 2.0
 tracks/0/type = "value"
@@ -371,13 +471,37 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 1, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("cuaderno2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TextureButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
@@ -390,28 +514,31 @@ scale = Vector2( 0.805198, 0.840371 )
 texture = ExtResource( 2 )
 
 [node name="cuadroTexto" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 363.647, 111.037 )
 scale = Vector2( 0.745408, 0.878427 )
 texture = ExtResource( 3 )
 
 [node name="barraObjeto" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 179.51, 176.734 )
 scale = Vector2( 0.476635, 0.402879 )
 texture = ExtResource( 4 )
 
 [node name="cuaderno" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 64.7717, 183.211 )
 scale = Vector2( 0.278375, 0.228909 )
 texture = ExtResource( 5 )
 
+[node name="cuaderno2" type="Sprite" parent="."]
+position = Vector2( 205.105, 186.075 )
+scale = Vector2( 0.278375, 0.228909 )
+texture = ExtResource( 5 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/cuaderno2 = SubResource( 6 )
 anims/salirEscena = SubResource( 1 )
 anims/texto1 = SubResource( 2 )
 anims/texto2 = SubResource( 3 )
-anims/texto3 = SubResource( 5 )
+anims/texto3 = SubResource( 4 )
 
 [node name="texto1" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -419,7 +546,7 @@ margin_left = 23.1264
 margin_top = 63.883
 margin_right = 749.126
 margin_bottom = 175.883
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Ya sé a qué venís, pero recién llegaron unas cajas con tornillos y tuercas que debo
 ordenar en el depósito. Si me das una mano, seguro terminamos rápido para poder charlar"
 
@@ -429,7 +556,7 @@ margin_left = 23.1264
 margin_top = 63.883
 margin_right = 749.126
 margin_bottom = 175.883
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Muchas gracias por tu ayuda. Ahora podemos hablar"
 
 [node name="texto3" type="Label" parent="."]
@@ -438,8 +565,18 @@ margin_left = 23.1264
 margin_top = 63.883
 margin_right = 749.126
 margin_bottom = 175.883
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 text = "Haz click en el cuaderno que está en mostrador para llevarte las anotaciones"
+
+[node name="texto4" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 23.1264
+margin_top = 63.883
+margin_right = 749.126
+margin_bottom = 175.883
+custom_fonts/font = SubResource( 5 )
+text = "Ahora te aconsejo que vayas a la imprenta y a la oficina de internet.
+ Allí seguramente habrá alguien con quien hablar."
 
 [node name="adolfo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -502,7 +639,6 @@ scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 10 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 600.826
 margin_top = 94.4853
 margin_right = 1076.83
@@ -511,8 +647,13 @@ rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 11 )
 texture_pressed = ExtResource( 12 )
 
-[node name="Sprite_Cuaderno" type="Sprite" parent="."]
-position = Vector2( 565.225, 339.311 )
-scale = Vector2( 0.187299, 0.257697 )
-texture = ExtResource( 13 )
+[node name="Sprite_Cuaderno" type="TextureButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 602.861
+margin_top = 297.85
+margin_right = 920.861
+margin_bottom = 657.85
+rect_scale = Vector2( 0.2, 0.2 )
+texture_normal = ExtResource( 13 )
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Sprite_Cuaderno" to="." method="_on_Sprite_Cuaderno_pressed"]
