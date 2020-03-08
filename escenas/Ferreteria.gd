@@ -10,6 +10,7 @@ func _ready():
 		$AnimationPlayer.play("texto2")
 	if global.entradasFerreteria == 2 :
 		$AnimationPlayer.play("texto3")
+	
 		
 func _on_TextureButton_pressed():
 	if global.entradasFerreteria == 0 :

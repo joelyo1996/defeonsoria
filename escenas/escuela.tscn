@@ -1,3 +1,107 @@
-[gd_scene format=2]
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://escenas/escuela.gd" type="Script" id=1]
+[ext_resource path="res://asset/aula.png" type="Texture" id=2]
+[ext_resource path="res://asset/dialogo2.png" type="Texture" id=3]
+[ext_resource path="res://asset/barradeobjetos.png" type="Texture" id=4]
+[ext_resource path="res://asset/libro.png" type="Texture" id=5]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=6]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=7]
+[ext_resource path="res://asset/Valeria.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "entrada1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cuadro_dialogo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("dialogo1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("romina:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="escuela" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/entrada1 = SubResource( 1 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 511.953, 302.066 )
+scale = Vector2( 0.796971, 0.837549 )
+texture = ExtResource( 2 )
+
+[node name="Cuadro_dialogo" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 366.56, 102.848 )
+scale = Vector2( 0.744794, 0.826758 )
+texture = ExtResource( 3 )
+
+[node name="Barra_objetos" type="Sprite" parent="Cuadro_dialogo"]
+position = Vector2( -238.41, 76.5532 )
+scale = Vector2( 0.672421, 0.533889 )
+texture = ExtResource( 4 )
+
+[node name="libro" type="Sprite" parent="Cuadro_dialogo"]
+position = Vector2( -387.612, 94.809 )
+scale = Vector2( 0.546231, 0.409844 )
+texture = ExtResource( 5 )
+
+[node name="libro2" type="Sprite" parent="Cuadro_dialogo"]
+position = Vector2( -192.871, 93.7458 )
+scale = Vector2( 0.449733, 0.333055 )
+texture = ExtResource( 5 )
+
+[node name="TextureButton" type="TextureButton" parent="Cuadro_dialogo"]
+margin_left = 372.958
+margin_top = 4.25296
+margin_right = 848.958
+margin_bottom = 418.253
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+
+[node name="dialogo1" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+margin_left = 35.1617
+margin_top = 43.9521
+margin_right = 75.1617
+margin_bottom = 57.9521
+text = "“Hoy tenemos la importante y divertida tarea de grabar un spot de radio que hable sobre el
+Derecho a la Comunicación. Seguramente ya habrán estado investigando sobre el tema, pero aun así
+hay tres cosas más que me gustaría repasar con ustedes"
+
+[node name="romina" type="Sprite" parent="."]
+position = Vector2( 541.164, 465.33 )
+scale = Vector2( 0.770062, 0.696971 )
+texture = ExtResource( 8 )
+[connection signal="pressed" from="Cuadro_dialogo/TextureButton" to="." method="_on_TextureButton_pressed"]

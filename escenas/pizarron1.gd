@@ -5,11 +5,13 @@ var opc2 = false
 var opc3 = false
 var opcion
 func _ready():
-	
+	global.entradaspizzaron = 3
 	if global.entradaspizzaron == 0:
 		$AnimationPlayer.play("entrada1")
 	if global.entradaspizzaron == 1:
 		$AnimationPlayer.play("entrada2")
+	if global.entradaspizzaron == 3:
+		$AnimationPlayer.play("entrada3")
 	pass
 
 	
@@ -24,6 +26,8 @@ func _on_Button_pressed():
 		$AnimationPlayer.play("opcion4")
 		opcion = 4
 		opc1 = true
+	
+		
 	pass # Replace with function body.
 
 
