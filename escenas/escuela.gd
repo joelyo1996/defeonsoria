@@ -1,8 +1,11 @@
 extends Node2D
 
 func _ready():
-	yield(get_tree().create_timer(2),"timeout")
-	$AnimationPlayer.play("entrada1")
+	if global.entradasEscuela == 0 :
+		yield(get_tree().create_timer(2),"timeout")
+		$AnimationPlayer.play("entrada1")
+	if global.entradasEscuela == 1 :
+		
 	pass
 
 

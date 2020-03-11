@@ -15,8 +15,9 @@
 script/source = "extends Node2D
 var a = 0
 var entrada_mapa
+
 func _ready():
-	global.entrada_mapa = 7
+
 	if (global.entrada_mapa == 0):
 		$AnimationPlayer.play(\"texto1\")
 		
@@ -253,7 +254,7 @@ tracks/6/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=11]
 resource_name = "Cuadro_salir5"
 length = 2.0
 tracks/0/type = "value"
@@ -329,8 +330,7 @@ tracks/5/keys = {
 "values": [ Vector2( 414.521, 286.297 ), Vector2( 817.034, 551.856 ) ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "Salir de escena"
+[sub_resource type="Animation" id=12]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -357,8 +357,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "cuadroSalir4"
+[sub_resource type="Animation" id=13]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("emcargada:modulate")
@@ -445,7 +444,7 @@ tracks/6/keys = {
 "values": [ Vector2( 900, 286.297 ), Vector2( 110.54, 446.24 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=14]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("botondialogo:modulate")
@@ -520,7 +519,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("textoDialogo2:modulate")
@@ -583,7 +582,7 @@ tracks/4/keys = {
 "values": [ Vector2( 414.521, 286.297 ) ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=16]
 resource_name = "cuadro_salir6"
 length = 3.0
 tracks/0/type = "value"
@@ -671,7 +670,7 @@ tracks/6/keys = {
 "values": [ Vector2( 200, 551.856 ) ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=17]
 resource_name = "cuadro_salir7"
 length = 3.0
 tracks/0/type = "value"
@@ -759,7 +758,7 @@ tracks/6/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=18]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("textoDialogo:modulate")
@@ -822,7 +821,7 @@ tracks/4/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=19]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("textoDialogo2:modulate")
@@ -861,7 +860,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=20]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("info:modulate")
@@ -948,7 +947,7 @@ tracks/6/keys = {
 "values": [ Vector2( 414.521, 286.297 ), Vector2( 900, 286.297 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=21]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("info:modulate")
@@ -1023,7 +1022,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=22]
 resource_name = "texto5"
 length = 2.0
 tracks/0/type = "value"
@@ -1135,7 +1134,7 @@ tracks/8/keys = {
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=23]
 resource_name = "texto6"
 length = 3.0
 tracks/0/type = "value"
@@ -1223,7 +1222,7 @@ tracks/6/keys = {
 "values": [ Vector2( 805.476, 490.29 ) ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=24]
 resource_name = "texto7"
 length = 3.0
 tracks/0/type = "value"
@@ -1311,7 +1310,7 @@ tracks/6/keys = {
 "values": [ Vector2( 229.514, 479.183 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=25]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("info:modulate")
@@ -1338,7 +1337,7 @@ tracks/1/keys = {
 "values": [ Vector2( 414.521, 286.297 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=26]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -1354,9 +1353,9 @@ tracks/0/keys = {
 "values": [ Vector2( 0.1, 0.1 ), Vector2( 0.2, 0.2 ) ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=27]
 
-[sub_resource type="RectangleShape2D" id=22]
+[sub_resource type="RectangleShape2D" id=28]
 extents = Vector2( 26.1924, 26.7651 )
 
 [node name="Node2D" type="Node2D"]
@@ -1708,26 +1707,26 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/CuadroSalir3 = SubResource( 10 )
-anims/Cuadro_salir5 = SubResource( 24 )
-"anims/Salir de escena" = SubResource( 11 )
-anims/cuadroSalir4 = SubResource( 12 )
-anims/cuadro_salir = SubResource( 13 )
-anims/cuadro_salir2 = SubResource( 14 )
-anims/cuadro_salir6 = SubResource( 26 )
-anims/cuadro_salir7 = SubResource( 28 )
-anims/texto1 = SubResource( 15 )
-anims/texto2 = SubResource( 16 )
-anims/texto3 = SubResource( 17 )
-anims/texto4 = SubResource( 18 )
-anims/texto5 = SubResource( 23 )
-anims/texto6 = SubResource( 25 )
-anims/texto7 = SubResource( 27 )
+anims/Cuadro_salir5 = SubResource( 11 )
+"anims/Salir de escena" = SubResource( 12 )
+anims/cuadroSalir4 = SubResource( 13 )
+anims/cuadro_salir = SubResource( 14 )
+anims/cuadro_salir2 = SubResource( 15 )
+anims/cuadro_salir6 = SubResource( 16 )
+anims/cuadro_salir7 = SubResource( 17 )
+anims/texto1 = SubResource( 18 )
+anims/texto2 = SubResource( 19 )
+anims/texto3 = SubResource( 20 )
+anims/texto4 = SubResource( 21 )
+anims/texto5 = SubResource( 22 )
+anims/texto6 = SubResource( 23 )
+anims/texto7 = SubResource( 24 )
 
 [node name="AnimationExclamacion" type="AnimationPlayer" parent="."]
 autoplay = "exclamacion"
-anims/exclamacio3 = SubResource( 19 )
-anims/exclamacion = SubResource( 20 )
-anims/exclamacion2 = SubResource( 21 )
+anims/exclamacio3 = SubResource( 25 )
+anims/exclamacion = SubResource( 26 )
+anims/exclamacion2 = SubResource( 27 )
 
 [node name="info" type="Sprite" parent="."]
 position = Vector2( 646.096, 444.715 )
@@ -1738,6 +1737,6 @@ texture = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="info/Area2D"]
 position = Vector2( 9.95142, 104.189 )
-shape = SubResource( 22 )
+shape = SubResource( 28 )
 [connection signal="button_up" from="botondialogo" to="." method="_on_botondialogo_button_up"]
 [connection signal="body_entered" from="info/Area2D" to="." method="_on_Area2D_body_entered"]

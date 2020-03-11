@@ -9,5 +9,6 @@ var con
 var tornillo
 var entradasFerreteria = 0
 var entradaspizzaron = 0
+var entradasEscuela = 0
 func _ready():
 	pass

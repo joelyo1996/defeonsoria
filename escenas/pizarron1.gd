@@ -5,7 +5,7 @@ var opc2 = false
 var opc3 = false
 var opcion
 func _ready():
-	global.entradaspizzaron = 3
+	
 	if global.entradaspizzaron == 0:
 		$AnimationPlayer.play("entrada1")
 	if global.entradaspizzaron == 1:
@@ -26,7 +26,10 @@ func _on_Button_pressed():
 		$AnimationPlayer.play("opcion4")
 		opcion = 4
 		opc1 = true
-	
+	if global.entradaspizzaron == 3:
+		$AnimationPlayer.play("opcion7")
+		opcion = 7
+		opc1 = true
 		
 	pass # Replace with function body.
 
@@ -44,6 +47,13 @@ func _on_boton_pressed():
 		$AnimationPlayer.play("opcion5_salir")
 	if (opcion ==6) :
 		$AnimationPlayer.play("opcion6_salir")
+	if (opcion ==7) :
+		$AnimationPlayer.play("opcion7_salir")
+	if (opcion ==8) :
+		$AnimationPlayer.play("opcion8_salir")
+	if (opcion ==9) :
+		$AnimationPlayer.play("opcion9_salir")
+	
 	if global.entradaspizzaron == 0:
 		if (opc1 == true && opc2 == true && opc3 == true ):
 			yield(get_tree().create_timer(4),"timeout")
@@ -53,8 +63,13 @@ func _on_boton_pressed():
 		if (opc1 == true && opc2 == true && opc3 == true ):
 			yield(get_tree().create_timer(4),"timeout")
 			global.entradaspizzaron = 2
+			global.entradasFerreteria = 2
 			get_tree().change_scene("res://escenas/Ferreteria.tscn")
-		
+	if global.entradaspizzaron == 3:
+		if (opc1 == true && opc2 == true && opc3 == true ):
+			yield(get_tree().create_timer(4),"timeout")
+			global.entradasEscuela = 1
+			get_tree().change_scene("res://escenas/escuela.tscn")
 	pass # Replace with function body.
 
 
@@ -68,6 +83,10 @@ func _on_Button2_pressed():
 		$AnimationPlayer.play("opcion5")
 		opcion = 5
 		opc2 = true
+	if global.entradaspizzaron == 3:
+		$AnimationPlayer.play("opcion8")
+		opcion = 8
+		opc2 = true
 	pass # Replace with function body.
 
 
@@ -80,5 +99,9 @@ func _on_Button3_pressed():
 	if global.entradaspizzaron == 1:
 		$AnimationPlayer.play("opcion6")
 		opcion = 6
+		opc3 = true
+	if global.entradaspizzaron == 3:
+		$AnimationPlayer.play("opcion9")
+		opcion = 9
 		opc3 = true
 	pass # Replace with function body.

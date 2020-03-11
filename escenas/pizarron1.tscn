@@ -1,11 +1,13 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://escenas/pizarron1.gd" type="Script" id=1]
 [ext_resource path="res://asset/pizarron.jpg" type="Texture" id=2]
 [ext_resource path="res://asset/Valeria.png" type="Texture" id=3]
 [ext_resource path="res://Fuentes/Supersonic Rocketship.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=5]
-[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=6]
+[ext_resource path="res://Fuentes/Fuente1.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fuentes/Fuente2.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://asset/Boton atras1_desplazamiento.png" type="Texture" id=7]
+[ext_resource path="res://asset/Boton atras2_desplazamiento.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 4 )
@@ -468,6 +470,18 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 483.573, 625.353 ), Vector2( 494.456, 409.054 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("opcion7:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 273.256, 183.82 ), Vector2( 273.256, 183.82 ), Vector2( 273.256, 183.82 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -1394,7 +1408,7 @@ tracks/5/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=18]
 resource_name = "opcion7"
 length = 3.0
 tracks/0/type = "value"
@@ -1469,13 +1483,422 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Vector2( 271.205, 171.584 ), Vector2( 271.205, 110 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("textoOpcion7:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "opcion7_salir"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("opcion7:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 271.205, 110 ), Vector2( 271.205, 110 ), Vector2( 271.205, 169.917 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("opcion7:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("textoOpcion7:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("titulo3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("opcion8:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("opcion9:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
 
 [sub_resource type="Animation" id=20]
-resource_name = "opcion7_salir"
+resource_name = "opcion8"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("titulo3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("opcion7:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("opcion8:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("opcion9:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("opcion8:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 272.62, 244.503 ), Vector2( 272.62, 110 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("fondo:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 509.95, 302.844 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("textoOpcion8:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="DynamicFont" id=18]
+[sub_resource type="Animation" id=21]
+resource_name = "opcion8_salir"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("opcion8:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.00919556 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("textoOpcion8:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("opcion8:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 272.62, 110 ), Vector2( 272.62, 240 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("opcion9:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("opcion7:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("titulo3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "opcion9"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("titulo3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("opcion7:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("opcion8:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("opcion9:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("opcion9:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 268.28, 339.503 ), Vector2( 268.28, 110 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("textoOpcion9:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "opcion9_salir"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("textoOpcion9:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("opcion9:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("opcion9:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 268.28, 110 ), Vector2( 268.28, 350 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("titulo3:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("opcion7:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("opcion8:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=22]
 size = 20
 font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 40
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 20
+font_data = ExtResource( 6 )
 
 [node name="pizarron1" type="Node2D"]
 script = ExtResource( 1 )
@@ -1498,6 +1921,7 @@ scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 
 [node name="romina" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 131.119, 354.74 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
@@ -1527,7 +1951,6 @@ __meta__ = {
 }
 
 [node name="titulo3" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 288.854
 margin_top = 119.252
 margin_right = 796.854
@@ -1565,9 +1988,9 @@ __meta__ = {
 [node name="opcion7" type="Label" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 margin_left = 271.205
-margin_top = 110.0
+margin_top = 169.917
 margin_right = 946.205
-margin_bottom = 169.0
+margin_bottom = 228.917
 custom_fonts/font = SubResource( 1 )
 text = "- Derecho a que los programas de radio y tv no discriminen a niños, niñas y adolescentes"
 __meta__ = {
@@ -1599,11 +2022,11 @@ __meta__ = {
 }
 
 [node name="opcion8" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 0 )
+modulate = Color( 0, 0, 0, 1 )
 margin_left = 272.62
-margin_top = 244.503
+margin_top = 240.0
 margin_right = 982.62
-margin_bottom = 303.503
+margin_bottom = 299.0
 custom_fonts/font = SubResource( 1 )
 text = "Derecho a ver y escuchar programas con contenido adecuado para niños, niñas y adolescentes,"
 __meta__ = {
@@ -1635,44 +2058,14 @@ __meta__ = {
 }
 
 [node name="opcion9" type="Label" parent="."]
-modulate = Color( 0, 0, 0, 0 )
+modulate = Color( 0, 0, 0, 1 )
 margin_left = 268.28
-margin_top = 339.503
+margin_top = 350.0
 margin_right = 1004.28
-margin_bottom = 398.503
+margin_bottom = 409.0
 custom_fonts/font = SubResource( 1 )
 text = "Derecho a que se respete el horario apto para todo público (ATP) y que no se emitan contenidos
  que no sean adecuados para niños, niñas y adolescentes."
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 296.0
-margin_top = 177.0
-margin_right = 530.0
-margin_bottom = 228.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button2" type="Button" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 291.512
-margin_top = 239.829
-margin_right = 525.512
-margin_bottom = 290.829
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button3" type="Button" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 296.0
-margin_top = 307.146
-margin_right = 530.0
-margin_bottom = 358.146
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1694,8 +2087,12 @@ anims/opcion5 = SubResource( 14 )
 anims/opcion5_salir = SubResource( 15 )
 anims/opcion6 = SubResource( 16 )
 anims/opcion6_salir = SubResource( 17 )
-anims/opcion7 = SubResource( 19 )
-anims/opcion7_salir = SubResource( 20 )
+anims/opcion7 = SubResource( 18 )
+anims/opcion7_salir = SubResource( 19 )
+anims/opcion8 = SubResource( 20 )
+anims/opcion8_salir = SubResource( 21 )
+anims/opcion9 = SubResource( 24 )
+anims/opcion9_salir = SubResource( 26 )
 
 [node name="IntercambiarIdeas" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -1703,7 +2100,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 22 )
 text = "Al intercambiar ideas con otras personas,
  formamos lazos con ellas. Podemos discutir y encontrar la forma de
  mejorar nuestro entorno."
@@ -1717,7 +2114,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 261.391
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 22 )
 text = "Informar, compartir la información, 
 
 uno de los pilares de cualquier comunidad."
@@ -1727,17 +2124,67 @@ __meta__ = {
 
 [node name="textoOpcion7" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 290.898
-margin_top = 201.391
-margin_right = 1196.9
-margin_bottom = 261.391
-custom_fonts/font = SubResource( 18 )
-text = "Informar, compartir la información, 
-
-uno de los pilares de cualquier comunidad."
+margin_left = 291.0
+margin_top = 154.0
+margin_right = 1263.0
+margin_bottom = 345.0
+custom_fonts/font = SubResource( 22 )
+text = "Según el Art. 70 de la Ley de Servicios de Comunicación audiovisual, la 
+programación de los servicios previstos en esta ley deberá evitar
+ contenidos que promuevan o inciten tratos discriminatorios
+basados en la raza, el color, el sexo, la orientación sexual, el idioma, 
+la religión, las opiniones políticas o de cualquier otra índole, el origen
+ nacional o social, la posición económica, el nacimiento,
+el aspecto físico, la presencia de discapacidades o que menoscaben la
+ dignidad humana o induzcan a comportamientos perjudiciales para el
+ ambiente o para la salud de las personas y la integridad de los
+niños, niñas o adolescentes"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="textoOpcion8" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 286.0
+margin_top = 157.0
+margin_right = 971.0
+margin_bottom = 348.0
+custom_fonts/mono_font = SubResource( 23 )
+text = "En la nota del Art. 68 de la Ley de Servicios de Comunicación Audiovisual se menciona la Ley 23849
+y la Convención sobre los Derechos del niño cuyo art. 17 dice:
+“Los Estados Partes reconocen la importante función que desempeñan los medios de comunicación y
+velarán por que el niño tenga acceso a información y material procedentes de diversas fuentes
+nacionales e internacionales, en especial la información y el material que tengan por finalidad
+promover su bienestar social, espiritual y moral y su salud física y mental. Con tal objeto, los Estados
+Partes:
+a) Alentarán a los medios de comunicación a difundir información y materiales de interés
+social y cultural para el niño, de conformidad con el espíritu del artículo 29;
+b) Promoverán la cooperación internacional en la producción, el intercambio y la difusión de
+esa información y esos materiales procedentes de diversas fuentes culturales, nacionales e
+internacionales;
+c) Alentarán la producción y difusión de libros para niños;
+d) Alentarán a los medios de comunicación a que tengan particularmente en cuenta las
+necesidades lingüísticas del niño perteneciente a un grupo minoritario o que sea indígena;
+e) Promoverán la elaboración de directrices apropiadas para proteger al niño contra toda
+información y material perjudicial para su bienestar, teniendo en cuenta las disposiciones de los
+artículos 13 y 18.”"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="textoOpcion9" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 286.0
+margin_top = 157.0
+margin_right = 971.0
+margin_bottom = 348.0
+custom_fonts/font = SubResource( 25 )
+text = "Según el Art. 68 de la Ley de Servicios de Comunicación audiovisual sobre La Protección de la niñez
+y contenidos dedicados, en todos los casos los contenidos de la programación, de sus avances y de la
+publicidad deben ajustarse a las siguientes condiciones:
+a) En el horario desde las 6.00 y hasta las 22.00 horas deberán ser aptos para todo público;
+b) Desde las 22.00 y hasta las 6.00 horas se podrán emitir programas considerados aptos para
+mayores.”"
 
 [node name="Derecho_preguntas" type="Label" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -1745,7 +2192,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 22 )
 text = "Todos y todas tenemos derecho a hacer preguntas. 
 Al encontrar las respuestas nos hacemos más sabios."
 __meta__ = {
@@ -1758,7 +2205,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 22 )
 text = "Todos y todas tenemos derecho a informarnos para no opinar sin
 
  fundamentos."
@@ -1772,7 +2219,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 22 )
 text = "Todos tenemos derecho a ser partícipes
 
  de los medios de comunicación, evitando
@@ -1788,7 +2235,7 @@ margin_left = 290.898
 margin_top = 201.391
 margin_right = 1196.9
 margin_bottom = 240.391
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 22 )
 text = "Todos y todas tenemos derecho a opinar, 
 aún más cuando es sobre un tema que nos afecta"
 __meta__ = {
@@ -1801,12 +2248,42 @@ margin_top = 409.054
 margin_right = 970.456
 margin_bottom = 823.054
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 296.0
+margin_top = 177.0
+margin_right = 950.0
+margin_bottom = 228.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 275.708
+margin_top = 325.093
+margin_right = 969.708
+margin_bottom = 376.093
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 292.0
+margin_top = 240.0
+margin_right = 964.0
+margin_bottom = 291.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="boton" to="." method="_on_boton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
